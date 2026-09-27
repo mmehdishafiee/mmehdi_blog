@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: fa-IR
-  baseUrl: eledah.ir/quartz
+  baseUrl: mmehdi-blog.pages.dev
   ignorePatterns:
     - private
     - templates
