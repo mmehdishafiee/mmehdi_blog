@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: بلاگ من
-  pageTitleSuffix: ""
+  pageTitle: میم
+  pageTitleSuffix: "وبلاگ شخصی محمد مهدی شفیعی"
   enableSPA: true
   enablePopovers: true
   analytics:
@@ -232,7 +232,11 @@ plugins:
       links:
         GitHub: https://github.com/eledah/quartz
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    nabled: true
+    options:
+      title: "آخرین نوشته‌ها"
+      limit: 1000
+      sort: newest
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
