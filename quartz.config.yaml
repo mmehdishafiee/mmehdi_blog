@@ -236,7 +236,6 @@ plugins:
     options:
       title: "آخرین نوشته‌ها"
       limit: 100
-      sort: newest
     layout:
       position: afterBody
       priority: 50
