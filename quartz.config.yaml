@@ -237,7 +237,7 @@ plugins:
       title: "آخرین نوشته‌ها"
       limit: 100
       sort: newest
-      layout:
+    layout:
       position: afterBody
       priority: 50
   - source: "@quartz-community/spacer"
