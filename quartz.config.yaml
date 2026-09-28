@@ -235,7 +235,7 @@ plugins:
     enabled: true
     options:
       title: "آخرین نوشته‌ها"
-      limit: 1000
+      limit: 100
       sort: newest
   - source: "@quartz-community/spacer"
     enabled: true
