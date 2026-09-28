@@ -232,7 +232,7 @@ plugins:
       links:
         GitHub: https://github.com/eledah/quartz
   - source: "@quartz-community/recent-notes"
-    nabled: true
+    enabled: true
     options:
       title: "آخرین نوشته‌ها"
       limit: 1000
