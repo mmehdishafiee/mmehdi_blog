@@ -5,6 +5,10 @@ on:
     branches:
       - v5
 
+  repository_dispatch:
+    types:
+      - rebuild-comments
+
 permissions:
   contents: read
   pages: write
