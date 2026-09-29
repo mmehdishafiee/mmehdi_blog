@@ -1,0 +1,27 @@
+{
+  "name": "ziscus-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./components.tsx",
+    "./components": "./components.tsx"
+  },
+  "quartz": {
+    "name": "ziscus-ui",
+    "displayName": "Ziscus Comments UI",
+    "description": "Static Ziscus comment section for Quartz.",
+    "version": "0.1.0",
+    "category": "component",
+    "components": {
+      "ZiscusComments": {
+        "name": "ziscus-comments",
+        "displayName": "Ziscus Comments",
+        "description": "Static Ziscus comments section.",
+        "version": "0.1.0",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 40
+      }
+    }
+  }
+}

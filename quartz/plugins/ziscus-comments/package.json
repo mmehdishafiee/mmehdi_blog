@@ -1,0 +1,16 @@
+{
+  "name": "ziscus-comments",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "quartz": {
+    "name": "ziscus-comments",
+    "displayName": "Ziscus Comments Data",
+    "description": "Fetches Ziscus comments during Quartz build.",
+    "version": "0.1.0",
+    "category": "transformer"
+  }
+}

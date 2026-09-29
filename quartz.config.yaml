@@ -226,6 +226,22 @@ plugins:
     layout:
       position: afterBody
       priority: 10
+  - source: ./quartz/plugins/ziscus-comments
+    enabled: true
+    options:
+      endpoint: https://ziscus-comments.lumg.workers.dev
+      timeoutMs: 5000
+    order: 100
+  - source: ./quartz/plugins/ziscus-ui
+    enabled: true
+    options:
+      endpoint: https://ziscus-comments.lumg.workers.dev
+      title: "نظرات"
+      emptyText: "هنوز نظری ثبت نشده. اولین نفری باشید که نظر می‌دهد."
+    order: 110
+    layout:
+      position: afterBody
+      priority: 40
   - source: "@quartz-community/footer"
     enabled: true
     options:
