@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./index.ts"
+    ".": "./dist/index.js"
   },
   "quartz": {
     "name": "ziscus-comments",
