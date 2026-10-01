@@ -28,29 +28,32 @@ function decodeHtmlEntities(value) {
 }
 
 async function fetchComments(commentId, endpoint, timeoutMs) {
-  const response = await fetch(
-    `${endpoint}/comments/${encodeURIComponent(commentId)}`,
-    { signal: AbortSignal.timeout(timeoutMs) },
-  )
-
-  if (!response.ok) {
-    throw new Error(
-      `Ziscus returned HTTP ${response.status} for commentId "${commentId}".`,
+  try {
+    const response = await fetch(
+      `${endpoint}/comments/${encodeURIComponent(commentId)}`,
+      { signal: AbortSignal.timeout(timeoutMs) },
     )
+
+    if (!response.ok) {
+      return []
+    }
+
+    const data = await response.json()
+
+    if (!Array.isArray(data)) {
+      return []
+    }
+
+    return data.map((comment) => ({
+      id: String(comment.id),
+      author: decodeHtmlEntities(String(comment.author ?? "")),
+      body: decodeHtmlEntities(String(comment.body ?? "")),
+      createdAt: String(comment.created_at ?? comment.createdAt ?? ""),
+    }))
+  } catch (err) {
+    console.error(`[ziscus] fetch failed for "${commentId}":`, err instanceof Error ? err.message : err)
+    return []
   }
-
-  const data = await response.json()
-
-  if (!Array.isArray(data)) {
-    throw new Error(`Invalid Ziscus response for commentId "${commentId}".`)
-  }
-
-  return data.map((comment) => ({
-    id: String(comment.id),
-    author: decodeHtmlEntities(String(comment.author ?? "")),
-    body: decodeHtmlEntities(String(comment.body ?? "")),
-    createdAt: String(comment.created_at ?? comment.createdAt ?? ""),
-  }))
 }
 
 export const manifest = {
