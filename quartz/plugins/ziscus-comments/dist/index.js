@@ -1,4 +1,4 @@
-const COMMENT_ID_PATTERN = /^[a-z0-9-]+$/
+const COMMENT_ID_PATTERN = /^[a-z0-9_-]+$/
 
 function getCommentId(file) {
   const frontmatter = file.data.frontmatter
