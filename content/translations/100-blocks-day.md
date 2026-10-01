@@ -1,4 +1,4 @@
----
+﻿---
 title: "صد بلوک هر روز"
 date: "2023-10-25"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "100-blocks-day"
+commentId: 100-blocks-day
 ---
 
 اکثر ما حدود هفت تا هشت ساعت خواب شبانه داریم. پس 16 تا 17 ساعت از 24 ساعت روز بیدار هستیم. یعنی 1000 دقیقه.

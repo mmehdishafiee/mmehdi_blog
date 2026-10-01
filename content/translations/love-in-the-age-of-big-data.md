@@ -1,4 +1,4 @@
----
+﻿---
 title: "عشق در عصر داده‌های بزرگ"
 date: "2026-04-15"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "love-in-the-age-of-big-data"
+commentId: love-in-the-age-of-big-data
 ---
 
 زیرعنوا

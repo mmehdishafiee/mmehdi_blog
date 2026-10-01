@@ -1,4 +1,4 @@
----
+﻿---
 title: "متن و ترجمه Believer از Imagine Dragon"
 date: "2021-03-22"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "believer-imagine-dragon"
+commentId: believer-imagine-dragon
 ---
 
 Believer اولین آهنگی هست که من از بند Imagine Dragon شنیدم. و حالا توی این پست ترجمه آهنگ Believer رو گذاشتم. این آهنگ هم از دو جهت برام مهمه. یک اینکه من با این آهنگ با این بند آشنا شدم. دو هم اینکه معنی و فلسفه این آهنگ رو دوست دارم.

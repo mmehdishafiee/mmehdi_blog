@@ -1,9 +1,10 @@
----
+﻿---
 title: "بیست و پنج درس از بیست و چهار سالگی"
 date: "2025-12-18"
 tags: [گاه‌نوشت]
 draft: false
 original_slug: "25-lessons-from-turning-25"
+commentId: 25-lessons-from-turning-25
 ---
 
 [کوین کلی](https://en.wikipedia.org/wiki/Kevin_Kelly_(editor))، یه عادت بامزه داشت که به مناسبت تولدش، به تعداد عدد سال تولدش (یعنی مثلاً اگه 50 سالش شده، 50 تا) توصه/ نصیحت رو روی وبلاگش می‌نوشت و منتشر می‌کرد. ( چیزی که [به مناسبت تولد 68 سالگی‌](https://mmehdi.ir/blog/68-bits-of-unsolicited-advice/)ش نوشت رو اینجا ترجمه کرده بودم قبلاً. می‌تونید بخونید.)

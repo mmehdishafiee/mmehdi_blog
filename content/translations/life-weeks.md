@@ -1,4 +1,4 @@
----
+﻿---
 title: "زندگی شما در هفته‌ها"
 date: "2024-06-15"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "life-weeks"
+commentId: life-weeks
 ---
 
 این نمودار زندگی طولانی یک انسان بر اساس سال‌هاست:

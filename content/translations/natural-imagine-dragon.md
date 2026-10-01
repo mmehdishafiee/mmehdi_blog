@@ -1,4 +1,4 @@
----
+﻿---
 title: "متن و ترجمه Natural از Imagine Dragon"
 date: "2021-03-24"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "natural-imagine-dragon"
+commentId: natural-imagine-dragon
 ---
 
 من به بند Imagine Dragons ارادتی دارم و در همین جهت تلاش کردم اینجا متن و ترجمه آهنگ Natural رو براتون بذارم. همینطور اون پایین لینک دانولد مستیقم آهنگ با دو کیفیت 128 و 320 هم هست.

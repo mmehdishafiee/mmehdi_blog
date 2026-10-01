@@ -1,4 +1,4 @@
----
+﻿---
 title: "متن و ترجمه Dance Me to the End of Love از Leonard Cohen"
 date: "2021-08-20"
 tags: [ترجمه]
@@ -7,6 +7,7 @@ source_author: ""
 source_url: ""
 draft: false
 original_slug: "dance-me-to-the-end-of-love-leonard-cohen"
+commentId: dance-me-to-the-end-of-love-leonard-cohen
 ---
 
 به‌نظر این آهنگ **لئونارد کوهن** نقطه شروع خوبی برای آشنایی و ورود به دنیای اون هست؛ برای همین تصمیم گرفتم متن و ترجمه Dance Me رو به عنوان اولین آهنگ از اون ترجمه کنم.

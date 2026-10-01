@@ -1,9 +1,10 @@
----
+﻿---
 title: "کارنکن؛ گشتن به دنبال شغلی مورد علاقه"
 date: "2021-02-26"
 tags: [گاه‌نوشت]
 draft: false
 original_slug: "karnakon-seo-internship"
+commentId: karnakon-seo-internship
 ---
 
 از اوایل ماه گذشته‌(11 ام بهمن) توی [دوره کارآموزی سئو](http://aminaramesh.ir/1399/11/16/seo6) با امین آرامش شرکت کردم. که این شد مشغله‌ای روی همه مشغله‌های دیگه‌ام.

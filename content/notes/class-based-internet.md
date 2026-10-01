@@ -1,9 +1,10 @@
----
+﻿---
 title: "اینترنت طبقاتی | تبعیض با اسم‌های جدید"
 date: "2025-07-04"
 tags: [گاه‌نوشت]
 draft: false
 original_slug: "class-based-internet"
+commentId: class-based-internet
 ---
 
 پیش‌نوشت:  
