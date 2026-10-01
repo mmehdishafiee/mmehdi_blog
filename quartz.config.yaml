@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Ù…ÛŒÙ…
-  pageTitleSuffix: "ÙˆØ¨Ù„Ø§Ú¯ Ø´Ø®ØµÛŒ Ù…Ø­Ù…Ø¯ Ù…Ù‡Ø¯ÛŒ Ø´ÙÛŒØ¹ÛŒ"
+   pageTitle: "میم"
+pageTitleSuffix: " – وبلاگ شخصی محمد مهدی شفیعی"
   enableSPA: true
   enablePopovers: true
   analytics:
@@ -236,8 +236,8 @@ plugins:
     enabled: true
     options:
       endpoint: https://ziscus-comments.lumg.workers.dev
-      title: "Ù†Ø¸Ø±Ø§Øª"
-      emptyText: "Ù‡Ù†ÙˆØ² Ù†Ø¸Ø±ÛŒ Ø«Ø¨Øª Ù†Ø´Ø¯Ù‡. Ø§ÙˆÙ„ÛŒÙ† Ù†ÙØ±ÛŒ Ø¨Ø§Ø´ÛŒØ¯ Ú©Ù‡ Ù†Ø¸Ø± Ù…ÛŒâ€ŒØ¯Ù‡Ø¯."
+      title: "نظرات"
+      emptyText: "هنوز نظری ثبت نشده. اولین نفری باشید که نظر می‌دهد."
     order: 110
     layout:
       position: afterBody
@@ -250,8 +250,8 @@ plugins:
   - source: "@quartz-community/recent-notes"
     enabled: true
     options:
-      title: "Ø¢Ø®Ø±ÛŒÙ† Ù†ÙˆØ´ØªÙ‡â€ŒÙ‡Ø§"
-      limit: 100
+      title: "آخرین نوشته‌ها"
+      limit: 5
     layout:
       position: afterBody
       priority: 50
