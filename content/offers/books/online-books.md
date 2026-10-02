@@ -44,7 +44,7 @@ commentId: online-books
 
 [فرگشت ۱۰۱](https://evolution101.ir/)
 
-حتماً بخوانید: **[لیست وبلاگ های شخصی](https://mmehdi.ir/persian-blogs/)**
+حتماً بخوانید: **[لیست وبلاگ های شخصی](/offers/books/persian-blogs)**
 
 ## کتاب تمرکز
 
@@ -82,7 +82,7 @@ commentId: online-books
 
 [فقط برای تفریح](https://linuxstory.ir/)
 
-حتماً بخوانید: [لیست دوره ها و مینی دوره های جادی](https://mmehdi.ir/jadi-courses-list/)
+حتماً بخوانید: [لیست دوره ها و مینی دوره های جادی](/lists/jadi-courses-list)
 
 ## کتاب اسنوکرش
 
@@ -212,7 +212,7 @@ commentId: online-books
 
 [طوفانی از شمشیرها](https://s7.picofile.com/file/8373928442/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%B3%D9%88%D9%85_%D8%B7%D9%88%D9%81%D8%A7%D9%86_%D8%B4%D9%85%D8%B4%DB%8C%D8%B1%D9%87%D8%A7.zip.html)
 
-حتماً بخوانید: **[لیست بهترین فیلم‌هایی که دیده‌ام](https://mmehdi.ir/my-watch-list/)**
+حتماً بخوانید: **[لیست بهترین فیلم‌هایی که دیده‌ام](/offers/films/my-watch-list)**
 
 ### کتـاب رَ ِپچـر:
 

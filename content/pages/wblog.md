@@ -26,10 +26,10 @@ original_slug: "wblog"
 
 ## فهرست:
 
-**[بخ](https://mmehdi.ir/wblog/2/)****[ش](https://mmehdi.ir/wblog/2/)** **[محتوایی](https://mmehdi.ir/wblog/2/)  
-[بخش ظاهری](https://mmehdi.ir/wblog/3/)  
-[بخش فنی](https://mmehdi.ir/wblog/4/)  
-[سایر](https://mmehdi.ir/wblog/5/)**
+**[بخ](/pages/wblog2/)****[ش](/pages/wblog2/)** **[محتوایی](/pages/wblog2/)  
+[بخش ظاهری](/pages/wblog3/)  
+[بخش فنی](/pages/wblog4/)  
+[سایر](/pages/wblog5/)**
 
 ## بخش محتوایی:
 
@@ -146,7 +146,7 @@ original_slug: "wblog"
 
 قبلاً هر سه ماه یک بار، یک اسکرین‌شات از داشبورد گوگل آنالیتیکس منتشر می‌کردم؛ اما از الان می‌تونید آمار زنده وبلاگ رو به کمک [دیتاباکس](https://databox.com/signup#embed) با کلیک روی دکمه زیر ببینید:
 
-[آمار زنده وبلاگ](https://mmehdi.ir/wblog/6/)
+[آمار زنده وبلاگ](/pages/wblog6/)
 
 اگر چیز خاص و باحالی از آمار وبلاگ در‌آوردید و یا نکته‌ای نظرتون رو جلب کرد، از طریق ایمیل زیر می‌تونیم با هم درموردش صحبت کنیم:
 

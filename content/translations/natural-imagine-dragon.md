@@ -14,7 +14,7 @@ commentId: natural-imagine-dragon
 
 آهنگ رو خودم ترجمه کردم، سعی کردم کم اشکال باشه، خوشحال می‌شم اگر اشکالی توی ترجمه می‌بیند بهم بگید تا درستش کنم.
 
-پیشنهاد می‌کنم یک نگاهی هم به [متن و ترجمه Believer از Imagine Dragon](https://mmehdi.ir/believer-imagine-dragon/) بندازید :)
+پیشنهاد می‌کنم یک نگاهی هم به [متن و ترجمه Believer از Imagine Dragon](/translations/believer-imagine-dragon) بندازید :)
 
 ![متن و ترجمه Natural از Imagine Dragon](/attachments/2.png)
 

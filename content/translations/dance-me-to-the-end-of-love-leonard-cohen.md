@@ -16,8 +16,8 @@ commentId: dance-me-to-the-end-of-love-leonard-cohen
 
 سعی کردم ترجمه خوب و تمیز از کار در بیاد، اما همچنان خالی از اشکال نیست؛ مثل همیشه باعث خوشحالی من خواهد بود اگر اشکال، نقد و نظری درمورد ترجمه دارید زیر همین نوشته، کامنت بگذارید و بهم بگید.
 
-آهنگ‌های [Imagine Dragon](https://mmehdi.ir/natural-imagine-dragon/) به آرامی کوهن نیست؛ اما توصیه می‌کنم،  
-[متن و ترجمه Believer از Imagine Dragon](https://mmehdi.ir/believer-imagine-dragon/)  
+آهنگ‌های [Imagine Dragon](/translations/natural-imagine-dragon) به آرامی کوهن نیست؛ اما توصیه می‌کنم،  
+[متن و ترجمه Believer از Imagine Dragon](/translations/believer-imagine-dragon)  
 رو هم بخونید و بشنوید.
 
 ## فهرست:

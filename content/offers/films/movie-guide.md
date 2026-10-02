@@ -68,7 +68,7 @@ commentId: movie-guide
 
 پس این مطلب یک مرجع خوب برای انتخاب کردن فیلم هست. حتماً بهش سر بزنید:
 
-[**لیست فیلم های پیشنهادی**](https://mmehdi.ir/my-watch-list/)
+[**لیست فیلم های پیشنهادی**](/offers/films/my-watch-list)
 
 ##### لیست ۲۵۰ فیلم IMDB:
 
@@ -264,7 +264,7 @@ commentId: movie-guide
 
 اینطوری چیزهای جدیدی یاد می‌گیرید. هم درمورد فیلم و سینما و هم اطلاعات جانبی دیگه.
 
-چندتا مرجع خوب برای خوندن نقد فیلم رو توی این پست وبلاگم که **[فیلم معرفی](https://mmehdi.ir/my-watch-list/)** کردم می‌تونید پیدا کنید. به جز اون‌ها [نقد فارسی](http://naghdefarsi.com/)، فیلمم [کن](http://filmamkon.ir/)، [زومجی](https://www.zoomg.ir/category/movie-tv-show-review/)، [فیلم‌جی](http://filmg.ir/) و [کافه سینما](http://caffecinema.com/) و نقد روز هم هستند که می‌تونید بهشون سر بزنید.
+چندتا مرجع خوب برای خوندن نقد فیلم رو توی این پست وبلاگم که **[فیلم معرفی](/offers/films/my-watch-list)** کردم می‌تونید پیدا کنید. به جز اون‌ها [نقد فارسی](http://naghdefarsi.com/)، فیلمم [کن](http://filmamkon.ir/)، [زومجی](https://www.zoomg.ir/category/movie-tv-show-review/)، [فیلم‌جی](http://filmg.ir/) و [کافه سینما](http://caffecinema.com/) و نقد روز هم هستند که می‌تونید بهشون سر بزنید.
 
 ## سوالات متداول:
 

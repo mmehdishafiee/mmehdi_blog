@@ -4,7 +4,7 @@ draft: false
 original_slug: "newsletter-archive"
 ---
 
-در این صفحه، شماره‌های منتشر شده از [خبرنامه کوله](https://mmehdi.ir/newsletter/) پشتی را می‌توانید مشاهده کنید.
+در این صفحه، شماره‌های منتشر شده از [خبرنامه کوله](/pages/newsletter) پشتی را می‌توانید مشاهده کنید.
 
 شماره اول خبرنامه
 
@@ -51,5 +51,5 @@ original_slug: "newsletter-archive"
 ## عضویت در خبرنامه
 
 شما می‌توانید از طریق لینک زیر درخبرنامه کوله پشتی عضو شوید.
-[عضویت در خبرنامه](https://mmehdi.ir/newsletter/) 
+[عضویت در خبرنامه](/pages/newsletter) 
 توجه
