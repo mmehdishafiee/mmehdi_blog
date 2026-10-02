@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: fa-IR
-  baseUrl: new.mmehdi.ir
+  baseUrl: blog.mmehdi.ir
   ignorePatterns:
     - private
     - templates
