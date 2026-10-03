@@ -1,7 +1,7 @@
 // components.tsx
 import { jsx, jsxs } from "preact/jsx-runtime";
 var ZiscusComments = (opts) => {
-  const Component = ({ fileData }) => {
+const Component = ({ fileData, cfg }) => {
     const data = fileData;
     const ziscus = data.ziscusComments;
     if (!ziscus?.commentId) {
@@ -9,7 +9,7 @@ var ZiscusComments = (opts) => {
     }
     const comments = ziscus.comments ?? [];
     const currentSlug = fileData.slug ?? "";
-    const redirectPath = currentSlug ? `/${currentSlug}` : "/";
+    const redirectPath = currentSlug ? `https://${cfg.baseUrl}/${currentSlug}` : `https://${cfg.baseUrl}/`;
     return /* @__PURE__ */ jsx("section", { class: "ziscus-comments", id: "comments", dir: "rtl", children: /* @__PURE__ */ jsxs("div", { class: "ziscus-comments-inner", children: [
       /* @__PURE__ */ jsxs("div", { class: "ziscus-comments-header", children: [
         /* @__PURE__ */ jsx("h2", { children: opts.title ?? "\u0646\u0638\u0631\u0627\u062A" }),

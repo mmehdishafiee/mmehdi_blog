@@ -27,7 +27,7 @@ interface Options {
 }
 
 export const ZiscusComments: QuartzComponentConstructor<Options> = (opts) => {
-  const Component: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
+  const Component = ({ fileData, cfg }) => {
     const data = fileData as ZiscusFileData
     const ziscus = data.ziscusComments
 
@@ -37,7 +37,7 @@ export const ZiscusComments: QuartzComponentConstructor<Options> = (opts) => {
 
     const comments = ziscus.comments ?? []
     const currentSlug = fileData.slug ?? ""
-    const redirectPath = currentSlug ? `/${currentSlug}` : "/"
+    const redirectPath = currentSlug ? `https://${cfg.baseUrl}/${currentSlug}` : `https://${cfg.baseUrl}/`;
 
     return (
       <section class="ziscus-comments" id="comments" dir="rtl">
