@@ -1,7 +1,7 @@
 // components.tsx
 import { jsx, jsxs } from "preact/jsx-runtime";
 var ZiscusComments = (opts) => {
-const Component = ({ fileData, cfg }) => {
+  const Component = ({ fileData, cfg }) => {
     const data = fileData;
     const ziscus = data.ziscusComments;
     if (!ziscus?.commentId) {
