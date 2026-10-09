@@ -1,11 +1,11 @@
 ---
-
-title: "سلام دنیا! و چندتا چیز دیگه."
-date: "2020-08-23"
-tags: [گاه‌نوشت]
+title: سلام دنیا! و چندتا چیز دیگه.
+date: 2020-08-23
+tags:
+  - گاه‌نوشت
 draft: false
-original_slug: "hello-world"
-commentId: z7k3m9
+original_slug: hello-world
+commentId: hello-world
 ---
 
 > به وردپرس خوش آمدید. این اولین نوشتهٔ شماست. این را ویرایش یا حذف کنید، سپس نوشتن را شروع نمایید!
