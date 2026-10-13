@@ -1,7 +1,7 @@
 ---
-title: "شهر *من* بخند"
-draft: false
-original_slug: "ts"
+title: شهر *من* بخند
+draft: true
+original_slug: ts
 ---
 
 این صفحه حاوی مطالب اضافی و به نوعی کامل کننده آلبوم شهر من بخند گروه پالته.  
