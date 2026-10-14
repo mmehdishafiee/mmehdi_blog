@@ -1,0 +1,37 @@
+{
+  "name": "graph-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild components.tsx --bundle --format=esm --platform=node --target=es2022 --jsx=automatic --jsx-import-source=preact --external:preact --external:preact/* --external:@quartz-community/* --outfile=dist/components.js"
+  },
+  "exports": {
+    ".": "./dist/components.js",
+    "./components": "./dist/components.js"
+  },
+  "peerDependencies": {
+    "preact": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "quartz": {
+    "name": "graph-local",
+    "displayName": "Local Graph",
+    "description": "Graph view using locally-hosted d3 + pixi instead of CDN.",
+    "version": "1.0.0",
+    "category": "component",
+    "defaultEnabled": true,
+    "components": {
+      "Graph": {
+        "name": "graph-local",
+        "displayName": "Graph (local libs)",
+        "description": "Graph view with locally-hosted d3+pixi (no CDN).",
+        "version": "1.0.0",
+        "defaultPosition": "right",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

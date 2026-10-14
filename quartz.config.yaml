@@ -162,6 +162,8 @@ plugins:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
+    enabled: false
+  - source: ./quartz/plugins/graph-local
     enabled: true
     layout:
       position: right
@@ -319,11 +321,13 @@ layout:
     folder:
       exclude:
         - reader-mode
+        - recent-posts
       positions:
         right: []
     tag:
       exclude:
         - reader-mode
+        - recent-posts
       positions:
         right: []
     canvas: {}
