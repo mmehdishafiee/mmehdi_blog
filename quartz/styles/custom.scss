@@ -111,6 +111,31 @@ blockquote {
   transition: border-color 0.2s;
 }
 
+/* Tag pills: drop the large gray highlight box; keep the # marker + accent color */
+a.internal.tag-link,
+a.tag-link,
+.tag-link {
+  background-color: transparent !important;
+  padding: 0 0.1rem;
+  border-radius: 0;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+a.internal.tag-link:hover,
+a.tag-link:hover,
+.tag-link:hover {
+  background-color: transparent;
+  color: var(--tertiary);
+}
+
+a.internal.tag-link::before,
+a.tag-link::before {
+  content: "#";
+  margin-inline-end: 0.15em;
+  color: var(--gray);
+}
+
 // Quartz Themes expect --callout-title-color; bridge from per-callout accent color.
 .callout {
   --callout-title-color: var(--callout-color);
