@@ -1,0 +1,37 @@
+{
+  "name": "recent-posts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild components.tsx --bundle --format=esm --platform=node --target=es2022 --jsx=automatic --jsx-import-source=preact --external:preact --external:preact/* --external:@quartz-community/* --outfile=dist/components.js"
+  },
+  "exports": {
+    ".": "./dist/components.js",
+    "./components": "./dist/components.js"
+  },
+  "peerDependencies": {
+    "preact": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "quartz": {
+    "name": "recent-posts",
+    "displayName": "Recent Posts",
+    "description": "Recent notes filtered to real post folders.",
+    "version": "1.0.0",
+    "category": "component",
+    "defaultEnabled": true,
+    "components": {
+      "RecentPosts": {
+        "name": "recent-posts",
+        "displayName": "Recent Posts",
+        "description": "Recent notes filtered to real post folders.",
+        "version": "1.0.0",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 50
+      }
+    }
+  }
+}

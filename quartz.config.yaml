@@ -21,24 +21,24 @@ configuration:
     colors:
       lightMode:
         light: "#faf8f8"
-        lightgray: "#e5e5e5"
+        lightgray: "#f0e6f5"
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
         dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        secondary: "#5b2f84"
+        tertiary: "#b43eb6"
+        highlight: rgba(180, 62, 182, 0.12)
+        textHighlight: "#e7f6ff"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
+        light: "#1c1424"
+        lightgray: "#352845"
         gray: "#646464"
         darkgray: "#d4d4d4"
         dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        secondary: "#c46aa9"
+        tertiary: "#0693e3"
+        highlight: rgba(196, 106, 169, 0.15)
+        textHighlight: "#5b2f8455"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -241,19 +241,21 @@ plugins:
     layout:
       position: afterBody
       priority: 40
-  - source: "@quartz-community/footer"
+  - source: ./quartz/plugins/footer
     enabled: true
     options:
       links:
-        GitHub: https://github.com/eledah/quartz
-  - source: "@quartz-community/recent-notes"
+        GitHub: https://github.com/mmehdishafiee/mmehdi_blog
+  - source: ./quartz/plugins/recent-posts
     enabled: true
     options:
       title: "آخرین نوشته‌ها"
       limit: 5
-    layout:
-      position: afterBody
-      priority: 50
+  - source: "@quartz-community/recent-notes"
+    enabled: false
+    options:
+      title: "آخرین نوشته‌ها"
+      limit: 5
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
