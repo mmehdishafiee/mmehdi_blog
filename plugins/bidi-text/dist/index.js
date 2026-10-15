@@ -1,10 +1,10 @@
-// src/transformer.ts
+// plugins/bidi-text/src/transformer.ts
 import { visit } from "unist-util-visit";
 var farsiRange = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
-var skipChars = /[\p{Emoji_Presentation}\p{Extended_Pictographic}\s\-\[\]{}\/\\#=@!*_\u200D(){}[\].,:»«]/u;
+var letter = /\p{L}/u;
 function isFarsi(text) {
   for (const char of text) {
-    if (skipChars.test(char)) {
+    if (!letter.test(char)) {
       continue;
     }
     return farsiRange.test(char);

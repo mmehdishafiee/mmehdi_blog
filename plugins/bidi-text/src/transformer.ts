@@ -4,12 +4,14 @@ import { visit } from "unist-util-visit"
 import type { QuartzTransformerPlugin } from "@quartz-community/types"
 
 const farsiRange = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/
-const skipChars =
-  /[\p{Emoji_Presentation}\p{Extended_Pictographic}\s\-\[\]{}\/\\#=@!*_\u200D(){}[\].,:»«]/u
+const letter = /\p{L}/u
 
+// Bidi rule: direction is decided by the first *letter*, not the first
+// non-whitespace character. Digits, punctuation and emoji are "weak"
+// characters — e.g. "## 1: خواب" should still be rtl.
 function isFarsi(text: string): boolean {
   for (const char of text) {
-    if (skipChars.test(char)) {
+    if (!letter.test(char)) {
       continue
     }
     return farsiRange.test(char)
