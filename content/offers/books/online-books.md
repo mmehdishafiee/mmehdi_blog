@@ -82,7 +82,7 @@ commentId: online-books
 
 [فقط برای تفریح](https://linuxstory.ir/)
 
-حتماً بخوانید: [لیست دوره ها و مینی دوره های جادی](/lists/jadi-courses-list)
+حتماً بخوانید: [لیست دوره ها و مینی دوره های جادی](jadi-courses-list.md)
 
 ## کتاب اسنوکرش
 
