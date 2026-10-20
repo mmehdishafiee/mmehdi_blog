@@ -1,9 +1,9 @@
 ---
 title: "تجربه زیسته: تصادف، شکستگی و التیام (مداوم آپدیت میشه)"
-date: "2023-06-09"
-tags: [گاه‌نوشت]
+date: 2023-06-09
+tags:
 draft: false
-original_slug: "motorcycle-crash"
+original_slug: motorcycle-crash
 commentId: motorcycle-crash
 ---
 

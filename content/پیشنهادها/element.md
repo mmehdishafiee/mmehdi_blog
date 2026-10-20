@@ -1,12 +1,13 @@
-﻿---
-title: "اگر پیام‌رسان‌ها را خدا آزاد نکرد"
-date: "2022-10-16"
-tags: [پیشنهاد]
+---
+title: اگر پیام‌رسان‌ها را خدا آزاد نکرد
+date: 2022-10-16
+tags:
+  - پیشنهاد
 item_title: ""
 item_creator: ""
 recommend_level: ""
-draft: false
-original_slug: "element"
+draft: true
+original_slug: element
 commentId: element
 ---
 

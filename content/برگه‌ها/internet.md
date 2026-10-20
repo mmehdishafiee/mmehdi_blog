@@ -1,7 +1,7 @@
 ---
-title: "طرح صیانت"
-draft: false
-original_slug: "internet"
+title: طرح صیانت
+draft: true
+original_slug: internet
 ---
 
 ![](/attachments/طرح-صیانت-1024x429.png)

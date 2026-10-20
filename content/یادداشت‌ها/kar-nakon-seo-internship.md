@@ -1,9 +1,9 @@
 ---
-title: "کارنکن؛ مزایای جانبی"
-date: "2021-04-26"
-tags: [گاه‌نوشت]
+title: کارنکن؛ مزایای جانبی
+date: 2021-04-26
+tags:
 draft: false
-original_slug: "kar-nakon-seo-internship"
+original_slug: kar-nakon-seo-internship
 commentId: kar-nakon-seo-internship
 ---
 

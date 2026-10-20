@@ -1,4 +1,4 @@
-﻿---
+---
 title: "متن و ترجمه Dance Me to the End of Love از Leonard Cohen"
 date: "2021-08-20"
 tags: [ترجمه]
@@ -16,7 +16,8 @@ commentId: dance-me-to-the-end-of-love-leonard-cohen
 
 سعی کردم ترجمه خوب و تمیز از کار در بیاد، اما همچنان خالی از اشکال نیست؛ مثل همیشه باعث خوشحالی من خواهد بود اگر اشکال، نقد و نظری درمورد ترجمه دارید زیر همین نوشته، کامنت بگذارید و بهم بگید.
 
-آهنگ‌های[Imagine Dragon](natural-imagine-dragon.md)) به آرامی کوهن نیست؛ اما توصیه می‌کنم،  [متن و ترجمه Believer از Imagine Dragon](believer-imagine-dragon.md))  
+آهنگ‌های[Imagine Dragon](natural-imagine-dragon.md)) به آرامی کوهن نیست؛ اما توصیه می‌کنم،  
+[متن و ترجمه Believer از Imagine Dragon](believer-imagine-dragon.md))  
 رو هم بخونید و بشنوید.
 
 ## فهرست:

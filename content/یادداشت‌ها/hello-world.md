@@ -2,7 +2,6 @@
 title: سلام دنیا! و چندتا چیز دیگه.
 date: 2020-08-23
 tags:
-  - گاه‌نوشت
 draft: false
 original_slug: hello-world
 commentId: hello-world

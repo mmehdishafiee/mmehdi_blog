@@ -3,11 +3,6 @@ title: "خدمات من"
 draft: false
 original_slug: "services"
 ---
-
-[Twitter](https://twitter.com/mmehdishafiee)
-[Linkedin-in](https://www.linkedin.com/in/mmehdishafiee/)
-[Telegram-plane](https://t.me/mmehdishafiee)
-
 **سلام**
 
 من [**محمد مهدی شفیعی**](https://mmehdi.ir/) هستم.  
@@ -35,28 +30,14 @@ original_slug: "services"
 
 ## طراحی سایت
 
-[سفارش طراحی](https://mmehdishafiee.formaloo.com/SiteDesignForm)
-
-Previous
-Next
-
 ## سئو سایت
-
-[سفارش سئو](https://mmehdishafiee.formaloo.com/SEOForm)
-
-Previous
-Next
 
 ## مدیریت شبکه‌های اجتماعی
 
-[مدیریت شبکه‌های اجتماعی](https://mmehdishafiee.formaloo.com/SocialMediaManagementForm)
 
-Previous
-Next
 
 ## ترجمه
 
-[سفارش ترجمه](https://mmehdishafiee.formaloo.com/translationForm)
 
 امیدوارم که به اطلاعات کافی برای تصمیم‌گیری درمورد همکاری با من رو توی این برگه پیدا کرده باشی.  
 اگر هنوز شک داری، یا سوالی داری یا نه، به جای خوندن یک برگه وبسایت دوست داری با خودم صحبت کنی، کافیه تا بهم یه [پیام روی تلگرام](https://t.me/mmehdishafiee) بدی.

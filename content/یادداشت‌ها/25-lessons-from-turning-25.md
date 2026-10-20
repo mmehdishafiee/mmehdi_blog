@@ -1,9 +1,9 @@
 ---
-title: "بیست و پنج درس از بیست و چهار سالگی"
-date: "2025-12-18"
-tags: [گاه‌نوشت]
+title: بیست و پنج درس از بیست و چهار سالگی
+date: 2025-12-18
+tags:
 draft: false
-original_slug: "25-lessons-from-turning-25"
+original_slug: 25-lessons-from-turning-25
 commentId: 25-lessons-from-turning-25
 ---
 

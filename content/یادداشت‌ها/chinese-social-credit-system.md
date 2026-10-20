@@ -1,9 +1,9 @@
-﻿---
-title: "مسابقه بی‌پایان محبوبیت"
-date: "2022-02-04"
-tags: [گاه‌نوشت]
+---
+title: مسابقه بی‌پایان محبوبیت
+date: 2022-02-04
+tags:
 draft: false
-original_slug: "chinese-social-credit-system"
+original_slug: chinese-social-credit-system
 commentId: chinese-social-credit-system
 ---
 

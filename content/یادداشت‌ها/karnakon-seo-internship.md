@@ -1,9 +1,9 @@
 ---
-title: "کارنکن؛ گشتن به دنبال شغلی مورد علاقه"
-date: "2021-02-26"
-tags: [گاه‌نوشت]
+title: کارنکن؛ گشتن به دنبال شغلی مورد علاقه
+date: 2021-02-26
+tags:
 draft: false
-original_slug: "karnakon-seo-internship"
+original_slug: karnakon-seo-internship
 commentId: karnakon-seo-internship
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "متن و ترجمه Natural از Imagine Dragon"
 date: "2021-03-24"
 tags: [ترجمه]

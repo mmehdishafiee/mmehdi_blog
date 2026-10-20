@@ -1,9 +1,9 @@
 ---
 title: "ناقوس مرگ اینترنت: ۵ واقعیت تکان‌دهنده در سایه قطعی‌های اخیر"
-date: "2026-02-14"
-tags: [گاه‌نوشت]
+date: 2026-02-14
+tags:
 draft: false
-original_slug: "the-death-knell-of-the-internet"
+original_slug: the-death-knell-of-the-internet
 commentId: the-death-knell-of-the-internet
 ---
 

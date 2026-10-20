@@ -2,9 +2,8 @@
 title: ۵۲ هرتز؛ یک نهنگ
 date: 2021-10-25
 tags:
-  - گاه‌نوشت
 draft: false
-original_slug: loneliest_whale
+original_slug: loneliest-whale
 commentId: loneliest-whale
 ---
 

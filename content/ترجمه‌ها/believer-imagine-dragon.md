@@ -1,4 +1,4 @@
-﻿---
+---
 title: "متن و ترجمه Believer از Imagine Dragon"
 date: "2021-03-22"
 tags: [ترجمه]
