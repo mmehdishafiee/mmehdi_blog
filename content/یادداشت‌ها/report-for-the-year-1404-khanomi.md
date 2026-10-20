@@ -1,10 +1,10 @@
 ---
-title: بیست و پنج درس از بیست و چهار سالگی
+title: در حاشیه گزارش 1404 خانومی
 date: 2025-12-18
 tags:
 draft: true
-original_slug: 25-lessons-from-turning-25
-commentId: 25-lessons-from-turning-25
+original_slug: report-for-the-year-1404-khanomi
+commentId: report-for-the-year-1404-khanomi
 ---
 نمی‌دونم چرا نرخ فروش رو با تورم مقایسه کردن
 نسبت به سال گذشته از 321 نفر شدن 300 نفر

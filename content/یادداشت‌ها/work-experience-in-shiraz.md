@@ -1,10 +1,10 @@
 ---
-title: بیست و پنج درس از بیست و چهار سالگی
+title: تجربه کار در شیراز
 date: 2025-12-18
 tags:
 draft: true
-original_slug: 25-lessons-from-turning-25
-commentId: 25-lessons-from-turning-25
+original_slug: work-experience-in-shiraz
+commentId: work-experience-in-shiraz
 ---
 بیشتر از ساعت کاری نمون
 
