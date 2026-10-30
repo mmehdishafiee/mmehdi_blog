@@ -1,6 +1,6 @@
 ---
 title: سوپر سروش و یک رسانه تبلیغاتی جدید
-date: 2025-12-18
+date: 2026-10-30
 tags:
 draft: false
 original_slug: Soroush-and-a-New-Advertising-Medium
