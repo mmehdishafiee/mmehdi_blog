@@ -3,8 +3,8 @@ title: نصیحت‌ها، لباس و زندگی
 date: 2024-8-21
 tags:
 draft: false
-original_slug: Advice-Clothing-and Life
-commentId: Advice-Clothing-and Life
+original_slug: advice-clothing-and-life
+commentId: advice-clothing-and-life
 ---
 نصیحت‌ها مثل لباسن. باید اون‌ها رو امتحان کنی و اگه مناسبت نبودن، کنار بذاری‌شون و یه چیز دیگه رو امتحان کنی.  
   
