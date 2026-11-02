@@ -25,7 +25,7 @@ function byDateAndAlphabetical() {
 function formatDate(d, locale = "en-US") {
   return d.toLocaleDateString(locale, { year: "numeric", month: "short", day: "2-digit" });
 }
-var POST_FOLDERS = ["notes/", "satrcin/", "translations/", "lists/", "offers/"];
+var POST_FOLDERS = ["\u062A\u0631\u062C\u0645\u0647\u200C\u0647\u0627/", "\u0633\u0637\u0631\u0686\u06CC\u0646/", "\u0644\u06CC\u0633\u062A\u200C\u0647\u0627/", "\u067E\u06CC\u0634\u0646\u0647\u0627\u062F\u0647\u0627/", "\u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u200C\u0647\u0627/"];
 var RecentPosts = (userOpts) => {
   const opts = {
     limit: 5,
@@ -68,7 +68,7 @@ var RecentPosts = (userOpts) => {
   .recent-posts > ul.recent-ul {
     list-style: none;
     margin-top: 1rem;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
   .recent-posts > ul.recent-ul > li {
     margin: 1rem 0;

@@ -35,7 +35,7 @@ function formatDate(d: Date, locale = "en-US") {
   return d.toLocaleDateString(locale, { year: "numeric", month: "short", day: "2-digit" })
 }
 
-const POST_FOLDERS = ["notes/", "satrcin/", "translations/", "lists/", "offers/"]
+const POST_FOLDERS = ["ترجمه‌ها/", "سطرچین/", "لیست‌ها/", "پیشنهادها/", "یادداشت‌ها/"]
 
 interface Options {
   title?: string
@@ -132,7 +132,7 @@ export const RecentPosts: QuartzComponentConstructor<Partial<Options> | undefine
   .recent-posts > ul.recent-ul {
     list-style: none;
     margin-top: 1rem;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
   .recent-posts > ul.recent-ul > li {
     margin: 1rem 0;
