@@ -1,8 +1,4 @@
-import {
-  QuartzComponent,
-  QuartzComponentConstructor,
-  QuartzComponentProps,
-} from "../../components/types"
+import { QuartzComponentConstructor, QuartzComponentProps } from "../../components/types"
 
 type ZiscusComment = {
   id: string
@@ -27,7 +23,7 @@ interface Options {
 }
 
 export const ZiscusComments: QuartzComponentConstructor<Options> = (opts) => {
-  const Component = ({ fileData, cfg }) => {
+  const Component = ({ fileData, cfg }: QuartzComponentProps) => {
     const data = fileData as ZiscusFileData
     const ziscus = data.ziscusComments
 

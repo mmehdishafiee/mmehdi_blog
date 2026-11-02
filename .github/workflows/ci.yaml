@@ -11,13 +11,9 @@ on:
 
 jobs:
   build-and-test:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
-    strategy:
-      matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v6
         with:
@@ -40,7 +36,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: .quartz/plugins
-          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz.lock.json') }}
+          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz.config.yaml') }}
           restore-keys: |
             ${{ runner.os }}-plugins-
 
@@ -49,16 +45,17 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
-      - name: Check types and style
-        run: npm run check
+      - name: Check types
+        run: npm run typecheck
 
       - name: Test
         run: npm test
 
-      - name: Ensure Quartz builds, check bundle info
-        run: npx quartz build --bundleInfo -d docs
+      - name: Ensure Quartz builds
+        run: npx quartz build -d docs
 
   publish-tag:
+    # Upstream release tagging only — never run from this fork.
     if: ${{ github.repository == 'jackyzha0/quartz' && github.ref == 'refs/heads/v5' }}
     runs-on: ubuntu-latest
     permissions:

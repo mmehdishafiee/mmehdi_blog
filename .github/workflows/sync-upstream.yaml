@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   issues: write
 
 jobs:
@@ -43,11 +44,16 @@ jobs:
             echo "has_updates=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Attempt merge
+      - name: Attempt merge on a sync branch
         id: merge
         if: steps.check.outputs.has_updates == 'true'
         run: |
           set +e
+          # Never merge straight into the deployed branch: do it on a throwaway
+          # branch and open a PR so a human reviews upstream changes first.
+          BRANCH="sync/upstream-$(date -u +%Y%m%d-%H%M)"
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          git checkout -b "$BRANCH"
           git merge upstream/v5 --no-edit --no-ff
           MERGE_EXIT=$?
 
@@ -71,9 +77,11 @@ jobs:
             REMAINING=$(git diff --name-only --diff-filter=U)
             if [ -n "$REMAINING" ]; then
               echo "merge_failed=true" >> $GITHUB_OUTPUT
-              echo "conflict_files<<EOF" >> $GITHUB_OUTPUT
-              echo "$REMAINING" >> $GITHUB_OUTPUT
-              echo "EOF" >> $GITHUB_OUTPUT
+              {
+                echo "conflict_files<<EOF"
+                echo "$REMAINING"
+                echo "EOF"
+              } >> $GITHUB_OUTPUT
             else
               git commit --no-edit
               echo "Auto-resolved all known conflicts and completed merge"
@@ -81,19 +89,47 @@ jobs:
           fi
           set -e
 
-      - name: Push changes (if merge succeeded)
-        if: steps.check.outputs.has_updates == 'true' && steps.merge.outputs.merge_failed != 'true'
+      - name: Abort failed merge
+        if: steps.merge.outputs.merge_failed == 'true'
         run: |
-          git push origin v5
-          echo "Successfully synced with upstream"
+          git merge --abort || true
+          git checkout v5 || true
+
+      - name: Push sync branch
+        if: steps.check.outputs.has_updates == 'true' && steps.merge.outputs.merge_failed != 'true'
+        env:
+          BRANCH: ${{ steps.merge.outputs.branch }}
+        run: |
+          git push origin "$BRANCH"
+          echo "Pushed $BRANCH"
+
+      - name: Open pull request for review
+        if: steps.check.outputs.has_updates == 'true' && steps.merge.outputs.merge_failed != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.merge.outputs.branch }}
+          BEHIND: ${{ steps.check.outputs.behind }}
+        run: |
+          gh pr create \
+            --base v5 \
+            --head "$BRANCH" \
+            --title "chore: sync with upstream (jackyzha0/quartz)" \
+            --body "ادغام خودکار $BEHIND کامیت جدید از upstream انجام شد.
+
+          این PR خودکار ساخته شده و **باید قبل از merge بازبینی شود** — به‌خصوص
+          \`quartz.config.yaml\`، \`theme/\`، \`plugins/\` و \`quartz/styles/custom.scss\`." \
+          || gh pr list --head "$BRANCH" --json url --jq '.[0].url'
 
       - name: Create issue for merge conflict
         if: steps.merge.outputs.merge_failed == 'true'
         uses: actions/github-script@v7
+        env:
+          CONFLICT_FILES: ${{ steps.merge.outputs.conflict_files }}
         with:
           script: |
             const title = '🔄 Sync Failed: Merge Conflicts with Upstream';
-            const conflictFiles = `${{ steps.merge.outputs.conflict_files }}`;
+            // Read via process.env (never interpolate untrusted values into the script body).
+            const conflictFiles = process.env.CONFLICT_FILES || '(unknown)';
             const body = `## Automatic sync failed
 
             The daily sync with upstream (jackyzha0/quartz) failed due to merge conflicts.
