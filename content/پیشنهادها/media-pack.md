@@ -48,7 +48,7 @@ commentId: media-pack
 
 فروردین ماه، ماه خوبی بوده؛ با چهار کتاب هم صحبت بودم؛ دوتاشون رو کامل خودندم و دوتای دیگه رو هنوز تموم نکردم. نظر من و معرفی کوتاه این کتاب‌ها رو این پایین می‌تونید بخونید.
 
-[در جستجوی دلتورا | جلد 7 هزارتوی هیولا](http://(https://www.goodreads.com/series/41221-deltora-quest)
+[در جستجوی دلتورا | جلد 7 هزارتوی هیولا](https://www.goodreads.com/series/41221-deltora-quest)
 
 در جستجوی دلتورا یک مجموعه 8 جلدی داستان فانتزی هست. این دومین داستان فانتزی هست که می‌خونم؛ دوستش دارم و می‌تونم توصیه کنم که توی وقت‌های آزادتون که نمی‌خواید کتاب غیرداستانی بخونید این کتاب رو بخونید. جلدهای کم‌حجمی داره و هر جلد هم چندتا فصل کوچیک داره که خوندنش رو راحت‌تر می‌کنه.
 
@@ -94,19 +94,19 @@ commentId: media-pack
 
 واقعاً پیشنهاد می‌کنم ببینیدش :)
 
-[One Flew Over the Cuckoo's Nest (1975)](http://(https://www.imdb.com/title/tt0073486)
+[One Flew Over the Cuckoo's Nest (1975)](https://www.imdb.com/title/tt0073486)
 
 یک جنایت کار رو نشون میده که برای فرار از کار اجباری خودش رو به دیوانگی می‌زنه. به یک آسایشگاه می‌فرستندش. فیلم داستان فرار یکی از دیووانه‌ها رو روایت می‌کنه. من بهش 8 دادم فکر می‌کنم.
 
 اگر قراره این ماه یک فیلم رو ببینید، و می‌‌خواید از کوله مدیا انتخابش کنید، همین فیلم رو ببینید. پشیمون نخواهید شد.
 
-[Raya and the Last Dragon (2021)](http://(https://www.imdb.com/title/tt5109280)
+[Raya and the Last Dragon (2021)](https://www.imdb.com/title/tt5109280)
 
 این انیمیشن رو با خواهرم دیدم. رایا دختر یک ریس قبیله است که قبلا با هفت قبیله دیگه (عددش رو شاید اشتباه کنم) متحد بودند و کشور واحدی داشتن که توسط اژدها ها محافظت می‌شدند. بخاطر اشتباه رایا سنگ اژدها می‌شکنه و…
 
 اگر به فیلم و سینما علاقه دارید؛ توصیه می‌کنم حتماً این مطلب من رو هم ببینید:  
   
-[لیست فیلم های پیشنهادی](https://mmehdi.ir/wp-admin/post.php?post=666&action=edit)
+[لیست فیلم های پیشنهادی](my-watch-list.md)
 
 ## ? سریال:
 
@@ -116,7 +116,7 @@ commentId: media-pack
 
 توصیه این ماهم برای دیدن سریال بین سریال‌های این ماه کوله مدیا ، هایمیمه :)
 
-[Mr. Robot](http://(https://www.imdb.com/title/tt4158110)
+[Mr. Robot](https://www.imdb.com/title/tt4158110)
 
 مستر روبات رو اتفاقی این هفته شروع کردم و فکر می‌کنم هفت یا هشت قسمت ازش دیدم. تا الان خوب بوده و سرگرم کننده بودن سوراخ و گاف گل درشت. اگر به هک و کامپیوتر علاقه دارید از دست ندیدش.
 
@@ -128,11 +128,11 @@ commentId: media-pack
 
 پیشنهاد می‌کنم این مستند رو ببینید. توی این مستند کسانی که نقش‌های کلیدی توی ساختن شبکه‌های اجتماعی داشتن درمورد معایب چیزی که ساختن حرف می‌زنند!
 
-من این مستند رو به پیشنهاد [رضا](http://(https://www.instagram.com/p/CJeT0uFHx_ChXfdj81Lrkk1HgCFjWk02LnV9Vg0/) دیدم. چیز جدیدی برای من نداشت اما یادآوری و بازگو شدن چیزهایی که می‌دونستم از زبان این افراد واقعاً تاثیرگذار بود.
+من این مستند رو به پیشنهاد [رضا](https://www.instagram.com/p/CJeT0uFHx_ChXfdj81Lrkk1HgCFjWk02LnV9Vg0/) دیدم. چیز جدیدی برای من نداشت اما یادآوری و بازگو شدن چیزهایی که می‌دونستم از زبان این افراد واقعاً تاثیرگذار بود.
 
 ## ? وبلاگ:
 
-[خروج از منطقه راحتی- علی سخاوتی](http://(http://alisekhavati.com/2020/02/%D8%AE%D8%B1%D9%88%D8%AC-%D8%A7%D8%B2-%D9%85%D9%86%D8%B7%D9%82%D9%87-%D8%B1%D8%A7%D8%AD%D8%AA%DB%8C-%DB%8C%D8%A7-%DA%A9%D8%A7%D9%85%D9%81%D9%88%D8%B1%D8%AA-%D8%B2%D9%88%D9%86/)بنظرم خوبه که همه‌ی ما این مطلب رو درمورد منطقه راحتی امن یا comfort zone بخونیم و سعی کنیم یه قدم از منطقه راحتی خودمون بیرون بیایم.)
+[خروج از منطقه راحتی- علی سخاوتی](http://alisekhavati.com/2020/02/%D8%AE%D8%B1%D9%88%D8%AC-%D8%A7%D8%B2-%D9%85%D9%86%D8%B7%D9%82%D9%87-%D8%B1%D8%A7%D8%AD%D8%AA%DB%8C-%DB%8C%D8%A7-%DA%A9%D8%A7%D9%85%D9%81%D9%88%D8%B1%D8%AA-%D8%B2%D9%88%D9%86/) بنظرم خوبه که همه‌ی ما این مطلب رو درمورد منطقه راحتی امن یا comfort zone بخونیم و سعی کنیم یه قدم از منطقه راحتی خودمون بیرون بیایم.
 
 بنظرم خوبه که همه‌ی ما این مطلب رو درمورد منطقه راحتی امن یا comfort zone بخونیم و سعی کنیم یه قدم از منطقه راحتی خودمون بیرون بیایم.
 
@@ -148,7 +148,7 @@ commentId: media-pack
 
 اگر به خواندن وبلاگ علاقه دارید به هیچ وجه نباید این مطلب من رو از دست بدید:  
   
-[معرفی بهترین وبلاگ های شخصی](https://mmehdi.ir/wp-admin/post.php?post=552&action=edit)
+[معرفی بهترین وبلاگ های شخصی](persian-blogs.md)
 
 ## ? پادکست:
 
@@ -180,7 +180,7 @@ commentId: media-pack
 
 [استرینگ کست| خون‌بازی](https://podcasts.google.com/feed/aHR0cDovL3N0cmluZ2Nhc3QuaXIvZmVlZC9wb2RjYXN0/episode/aHR0cHM6Ly9zdHJpbmdjYXN0LmlyLz9wb3N0X3R5cGU9cG9kY2FzdCZwPTEwMTk?sa=X&ved=0CAUQkfYCahcKEwjY56fBi_TvAhUAAAAAHQAAAAAQAw)
 
-داستان جوان‌ترین میلیارد زن خودساخته جهان؛ که یک کلاه‌بردار علمی بود! [الیزابت هولمز](http://(https://en.wikipedia.org/wiki/Elizabeth_Holmes) و شرکت [Theranos](https://en.wikipedia.org/wiki/Theranos). اگر به علم و داستان‌هاش علاقه دارید بشنوید.
+داستان جوان‌ترین میلیارد زن خودساخته جهان؛ که یک کلاه‌بردار علمی بود! [الیزابت هولمز](https://en.wikipedia.org/wiki/Elizabeth_Holmes) و شرکت [Theranos](https://en.wikipedia.org/wiki/Theranos). اگر به علم و داستان‌هاش علاقه دارید بشنوید.
 
 [هیرولیک - E09 – V for Vendetta-01](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2hlcm9saWNwb2RjYXN0L2ZlZWQueG1s/episode/aGVyb2xpY3BvZGNhc3QucG9kYmVhbi5jb20vNGUwYjU5NjEtZjgyZS01ZWQwLTg3ZDctZDdiODJhZGVkYzZm)
 
@@ -212,7 +212,7 @@ commentId: media-pack
 
 این پرونده هم سه قسمت داره. ترجمه میشه جنون معمولی و از دریچه نامه‌های چارلز بوکوفسکی به زندگی‌ش سرک می‌کشه. ادبیات رو اگر دوست دارید یا از اون مهم‌تر اگر از بوکوفسکی چیزی خوندید این اپیزود رو گوش کنید.
 
-[پادکست پرسه| Magic Molecules I](http://cy8yYzBkMTIxNC9wb2RjYXN0L3Jzcw/episode/NGQ1MzIyZTItYWM4YS00MDJmLWJkN2YtNWQ4MGRlZGU5MWQz?sa=X&ved=0CA0QkfYCahcKEwj4r6b0xJTwAhUAAAAAHQAAAAAQAQ)
+پادکست پرسه | Magic Molecules I
 
 این هم یک پرونده سه قسمتی هست. ملکول جادویی. درمورد مواد روانگردان هست. تا الان یک اپیزود ازش گوش کردم. جالبه و عجیب.
 

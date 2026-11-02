@@ -56,7 +56,7 @@ original_slug: ts
 
 ---
 
-![](http://abbas-mehrpouya.com/onewebmedia/Other_1.jpg)
+![](https://abbas-mehrpouya.com/onewebmedia/Other_1.jpg)
 
 خانه بر دوش
 

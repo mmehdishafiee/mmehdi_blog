@@ -347,7 +347,7 @@ original_slug: internet
 
 [در اینستاگرام ببینید](https://www.instagram.com/p/CR4hcaVJgHH/)
 
-[](blob:https://www.aparat.com/bc89ab1c-8065-47e6-a643-2d61fb2b3793)
+
 
 #### فرصت ها و چالش های طرح حمایت از کاربران فضای مجازی؛ گفت‌وگوی ویژه خبری 2030:
 

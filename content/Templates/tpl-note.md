@@ -1,6 +1,6 @@
 ---
 title:
-date: "[object Object]"
+date: {{date}}
 tags:
   - گاه‌نوشت
 draft: true

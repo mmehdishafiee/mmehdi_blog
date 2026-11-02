@@ -189,7 +189,7 @@ You made me a, you made me a believer, believer
 درد! (نشأت می‌گیره)  
 تو منو به یه، تو منو به یه باورمند (معتقد یا همچین چیزی)
 
-توی این پست هم سعی کردم [متن و ترجمه Natural از Imagine Dragon](https://mmehdi.ir/wp-admin/post.php?post=809&action=edit) رو براتون بذارم؛ یه نگاهی بهش بندازید.
+توی این پست هم سعی کردم [متن و ترجمه Natural از Imagine Dragon](natural-imagine-dragon.md) رو براتون بذارم؛ یه نگاهی بهش بندازید.
 
 ## دانلود:
 

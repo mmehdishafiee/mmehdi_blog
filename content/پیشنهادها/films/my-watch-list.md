@@ -558,7 +558,7 @@ commentId: my-watch-list
 
 ---
 
-حتماً بخوانید: [لیست کتاب های آزاد (و رایگان) فارسی](https://mmehdi.ir/wp-admin/post.php?post=963&action=edit)
+حتماً بخوانید: [لیست کتاب های آزاد (و رایگان) فارسی](online-books.md)
 
 ## سه و چهار ستاره‌‌ها:
 
