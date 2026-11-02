@@ -2,23 +2,41 @@
 import { visit } from "unist-util-visit";
 var farsiRange = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
 var letter = /\p{L}/u;
-function isFarsi(text) {
+var DIR_TAGS = /* @__PURE__ */ new Set([
+  "p",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "li",
+  "dt",
+  "dd",
+  "td",
+  "th",
+  "figcaption",
+  "blockquote"
+]);
+function firstLetterDirection(text) {
   for (const char of text) {
     if (!letter.test(char)) {
       continue;
     }
-    return farsiRange.test(char);
+    return farsiRange.test(char) ? "rtl" : "ltr";
   }
-  return false;
+  return void 0;
 }
 function getTextContent(node) {
-  return node.children.map((child) => {
-    if (child.type === "text") return child.value;
-    if (child.type === "element") {
-      return child.children.map((c) => c.type === "text" ? c.value : "").join("");
+  let out = "";
+  for (const child of node.children) {
+    if (child.type === "text") {
+      out += child.value;
+    } else if (child.type === "element") {
+      out += getTextContent(child);
     }
-    return "";
-  }).join("");
+  }
+  return out;
 }
 var BidiText = () => {
   return {
@@ -27,13 +45,15 @@ var BidiText = () => {
       return [
         () => (tree) => {
           visit(tree, "element", (node) => {
-            if (node.tagName === "p" || /^h[1-6]$/.test(node.tagName)) {
-              const textContent = getTextContent(node);
-              if (textContent.length > 0) {
-                node.properties = node.properties || {};
-                node.properties.dir = isFarsi(textContent) ? "rtl" : "ltr";
-              }
+            if (!DIR_TAGS.has(node.tagName)) {
+              return;
             }
+            const direction = firstLetterDirection(getTextContent(node));
+            if (!direction) {
+              return;
+            }
+            node.properties = node.properties || {};
+            node.properties.dir = direction;
           });
         }
       ];

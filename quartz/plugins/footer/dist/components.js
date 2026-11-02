@@ -10,7 +10,7 @@ var Footer = (opts) => {
   };
   Component.css = `
   footer {
-    text-align: left;
+    text-align: start;
     margin-bottom: 4rem;
     opacity: 0.7;
   }

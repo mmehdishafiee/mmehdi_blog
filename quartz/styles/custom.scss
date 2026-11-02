@@ -38,14 +38,14 @@ body,
   line-height: normal;
 }
 
-button#explorer .fold {
+.explorer .fold {
   opacity: 0.8;
   margin-left: 0 !important;
   margin-right: 0.5rem !important;
   transition: transform 0.3s;
 }
 
-.content-meta[show-comma="true"] > span:not(:last-child) {
+.content-meta[show-comma="true"] > *:not(:last-child) {
   margin-left: 8px !important;
   margin-right: 0px !important;
 }
@@ -60,32 +60,67 @@ button#explorer .fold {
   margin-left: 5px !important;
 }
 
-#explorer-content ul {
-  padding-right: 0.7rem !important;
-  padding-left: 0px !important;
+// Nested explorer list: stock indents/borders on the physical left; mirror for RTL.
+.explorer-content .folder-outer > ul {
+  margin-left: 0 !important;
+  margin-right: 6px !important;
+  padding-left: 0 !important;
+  padding-right: 0.8rem !important;
+  border-left: none !important;
+  border-right: 1px solid var(--lightgray) !important;
 }
 
-#toc-content .depth-1 {
-  padding: 0px !important;
+// Table of contents: stock indents from the left and left-aligns the header.
+button.toc-header {
+  text-align: right;
+}
+
+button.toc-header .fold {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+ul.toc-content.overflow .depth-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+ul.toc-content.overflow .depth-1 {
+  padding-left: 0 !important;
   padding-right: 1rem !important;
 }
 
-#toc-content .depth-2 {
-  padding: 0px !important;
+ul.toc-content.overflow .depth-2 {
+  padding-left: 0 !important;
   padding-right: 2rem !important;
 }
 
-#toc-content .depth-3 {
-  padding: 0px !important;
+ul.toc-content.overflow .depth-3 {
+  padding-left: 0 !important;
   padding-right: 3rem !important;
+}
+
+ul.toc-content.overflow .depth-4 {
+  padding-left: 0 !important;
+  padding-right: 4rem !important;
+}
+
+ul.toc-content.overflow .depth-5 {
+  padding-left: 0 !important;
+  padding-right: 5rem !important;
+}
+
+ul.toc-content.overflow .depth-6 {
+  padding-left: 0 !important;
+  padding-right: 6rem !important;
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(90deg) !important;
 }
 
-div.search.mobile-only {
-  padding-right: 10px !important;
+.mobile-only > .search {
+  padding-inline-start: 10px !important;
 }
 
 code {
@@ -107,7 +142,7 @@ blockquote {
   border-left: none;
   margin: 1rem 0;
   padding-right: 1rem;
-  padding-left: none;
+  padding-left: 0;
   transition: border-color 0.2s;
 }
 
@@ -199,4 +234,25 @@ a.tag-link::before {
       transform: translateX(100vw);
     }
   }
+}
+
+// Table headers: stock aligns them to the physical left; RTL needs right.
+th {
+  text-align: right;
+}
+
+// Tag pills inside list views: stock pushes them to the physical left.
+.section-li > .section > .tags {
+  justify-content: flex-start !important;
+}
+
+// note-properties disclosure arrow is built on border-right; mirror it for RTL.
+.note-properties .note-properties-header::before {
+  border-right: none;
+  border-left: 2px solid var(--darkgray);
+  transform: rotate(45deg);
+}
+
+.note-properties[open] > .note-properties-header::before {
+  transform: rotate(-45deg);
 }

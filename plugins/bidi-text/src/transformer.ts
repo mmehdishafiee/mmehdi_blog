@@ -1,36 +1,56 @@
 import type { PluggableList } from "unified"
-import type { Root as HastRoot, Element, Literal } from "hast"
+import type { Root as HastRoot, Element } from "hast"
 import { visit } from "unist-util-visit"
 import type { QuartzTransformerPlugin } from "@quartz-community/types"
 
 const farsiRange = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/
 const letter = /\p{L}/u
 
+// Block-level elements whose own text gets an explicit direction. List items,
+// table cells and figure captions are included: mixed-direction text reorders
+// there just as badly as inside a paragraph.
+const DIR_TAGS = new Set([
+  "p",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "li",
+  "dt",
+  "dd",
+  "td",
+  "th",
+  "figcaption",
+  "blockquote",
+])
+
 // Bidi rule: direction is decided by the first *letter*, not the first
 // non-whitespace character. Digits, punctuation and emoji are "weak"
 // characters — e.g. "## 1: خواب" should still be rtl.
-function isFarsi(text: string): boolean {
+function firstLetterDirection(text: string): "rtl" | "ltr" | undefined {
   for (const char of text) {
     if (!letter.test(char)) {
       continue
     }
-    return farsiRange.test(char)
+    return farsiRange.test(char) ? "rtl" : "ltr"
   }
-  return false
+  return undefined
 }
 
+// Collect text from the whole subtree — content is frequently nested two or
+// more levels deep (e.g. <p><em><strong>متن</strong></em></p>).
 function getTextContent(node: Element): string {
-  return node.children
-    .map((child) => {
-      if (child.type === "text") return child.value
-      if (child.type === "element") {
-        return (child as Element).children
-          .map((c) => (c.type === "text" ? (c as Literal).value : ""))
-          .join("")
-      }
-      return ""
-    })
-    .join("")
+  let out = ""
+  for (const child of node.children) {
+    if (child.type === "text") {
+      out += child.value
+    } else if (child.type === "element") {
+      out += getTextContent(child)
+    }
+  }
+  return out
 }
 
 export const BidiText: QuartzTransformerPlugin = () => {
@@ -40,13 +60,17 @@ export const BidiText: QuartzTransformerPlugin = () => {
       return [
         () => (tree: HastRoot) => {
           visit(tree, "element", (node: Element) => {
-            if (node.tagName === "p" || /^h[1-6]$/.test(node.tagName)) {
-              const textContent = getTextContent(node)
-              if (textContent.length > 0) {
-                node.properties = node.properties || {}
-                node.properties.dir = isFarsi(textContent) ? "rtl" : "ltr"
-              }
+            if (!DIR_TAGS.has(node.tagName)) {
+              return
             }
+            const direction = firstLetterDirection(getTextContent(node))
+            // No letters at all (only digits, punctuation or emoji): keep the
+            // document direction instead of forcing `ltr` onto it.
+            if (!direction) {
+              return
+            }
+            node.properties = node.properties || {}
+            node.properties.dir = direction
           })
         },
       ]
