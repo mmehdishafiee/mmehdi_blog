@@ -1,0 +1,37 @@
+{
+  "name": "print-button",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild components.tsx --bundle --format=esm --platform=node --target=es2022 --jsx=automatic --jsx-import-source=preact --external:preact --external:preact/* --external:@quartz-community/* --outfile=dist/components.js"
+  },
+  "exports": {
+    ".": "./dist/components.js",
+    "./components": "./dist/components.js"
+  },
+  "peerDependencies": {
+    "preact": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "quartz": {
+    "name": "print-button",
+    "displayName": "Print Button",
+    "description": "Print / save-as-PDF button shown next to the breadcrumbs.",
+    "version": "1.0.0",
+    "category": "component",
+    "defaultEnabled": true,
+    "components": {
+      "PrintButton": {
+        "name": "print-button",
+        "displayName": "Print Button",
+        "description": "Print / save-as-PDF button shown next to the breadcrumbs.",
+        "version": "1.0.0",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 8
+      }
+    }
+  }
+}

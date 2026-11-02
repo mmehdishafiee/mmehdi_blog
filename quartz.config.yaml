@@ -15,7 +15,7 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Vazirmatn
+      header: Ray-ExtraBold
       body: Vazirmatn
       code: IBM Plex Mono
     colors:
@@ -123,11 +123,13 @@ plugins:
       useThemeFonts: false
       fontOrigin: googleFonts
       body: Vazirmatn
-      header: Vazirmatn
+      header: Ray-ExtraBold
       interface: Vazirmatn
       code: IBM Plex Mono
+  # The "things" theme layer re-declares --secondary/--tertiary/--gray after the
+  # base layer and silently overwrites configuration.theme.colors. Keep it off.
   - source: "@quartz-themes/core"
-    enabled: true
+    enabled: false
     options:
       theme: things
       mode: both
@@ -161,6 +163,7 @@ plugins:
     layout:
       position: left
       priority: 50
+      display: desktop-only
   - source: "@quartz-community/graph"
     enabled: false
   - source: ./quartz/plugins/graph-local
@@ -168,51 +171,101 @@ plugins:
     layout:
       position: right
       priority: 10
+      display: desktop-only
   - source: "@quartz-community/search"
     enabled: true
     layout:
       position: left
-      priority: 20
-      group: toolbar
-      groupOptions:
-        grow: true
+      priority: 30
+      display: desktop-only
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 25
+      display: mobile-only
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
       position: right
       priority: 50
+      display: desktop-only
+  - source: "@quartz-community/backlinks"
+    enabled: true
+    layout:
+      position: right
+      priority: 50
+      display: mobile-only
+  - source: ./quartz/plugins/featured-cards
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 7
+  - source: ./quartz/plugins/featured-image
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 22
+      condition: not-index
+  - source: ./quartz/plugins/print-button
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 8
+      condition: not-index
+  - source: ./quartz/plugins/print-source
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 90
+      condition: not-index
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
       position: beforeBody
       priority: 10
+      condition: not-index
   - source: "@quartz-community/content-meta"
     enabled: true
     layout:
       position: beforeBody
       priority: 20
+      condition: not-index
   - source: "@quartz-community/tag-list"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 30
   - source: "@quartz-community/page-title"
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 10
+  - source: ./quartz/plugins/page-title
+    enabled: true
+    layout:
+      position: left
+      priority: 5
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
       position: left
-      priority: 30
-      group: toolbar
+      priority: 20
+      display: desktop-only
+      group: toggles
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      display: mobile-only
   - source: "@quartz-community/reader-mode"
     enabled: true
     layout:
       position: left
-      priority: 35
-      group: toolbar
+      priority: 25
+      display: desktop-only
+      group: toggles
   - source: "@quartz-community/breadcrumbs"
     enabled: true
     layout:
@@ -238,28 +291,41 @@ plugins:
     options:
       endpoint: https://ziscus-comments.lumg.workers.dev
       title: "نظرات"
-      emptyText: "هنوز نظری ثبت نشده. اولین نفری باشید که نظر می‌دهد."
+      emptyText: "هنوز نظری ثبت نشده. اولین نفری باشید که نظر میدهد."
     order: 110
     layout:
       position: afterBody
       priority: 40
+  # No layout block: the manifest declares defaultPosition "footer".
   - source: ./quartz/plugins/footer
     enabled: true
     options:
       links:
+        Telegram: https://t.me/Mmehdi_ir
         GitHub: https://github.com/mmehdishafiee/mmehdi_blog
+      aboutUrl: برگه‌ها/about
+  # Superseded by @quartz-community/recent-notes, which now ships the
+  # hideTagPages/hideFolderPages options that made this fork necessary.
   - source: ./quartz/plugins/recent-posts
-    enabled: true
-    options:
-      title: "آخرین نوشته‌ها"
-      limit: 5
-  - source: "@quartz-community/recent-notes"
     enabled: false
     options:
-      title: "آخرین نوشته‌ها"
+      title: "آخرین نوشتهها"
       limit: 5
-  - source: "@quartz-community/spacer"
+  - source: "@quartz-community/recent-notes"
     enabled: true
+    options:
+      title: "آخرین نوشتهها"
+      limit: 3
+      linkToMore: false
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 25
+      display: desktop-only
+  - source: "@quartz-community/spacer"
+    enabled: false
     options: {}
     order: 25
     layout:
@@ -275,12 +341,13 @@ plugins:
     options:
       includeAll: false
       includedProperties:
+        - date
         - description
         - tags
         - aliases
       excludedProperties: []
       hidePropertiesView: true
-      delimiters: ---
+      delimiters: "---"
       language: yaml
     order: 5
   - source: "@quartz-community/unlisted-pages"
@@ -307,8 +374,8 @@ plugins:
       display: all
 layout:
   groups:
-    toolbar:
-      priority: 35
+    toggles:
+      priority: 20
       direction: row
       gap: 0.5rem
   byPageType:
@@ -317,17 +384,17 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content:
+      exclude:
+        - "@quartz-community/explorer"
     folder:
       exclude:
-        - reader-mode
-        - recent-posts
+        - "@quartz-community/reader-mode"
       positions:
         right: []
     tag:
       exclude:
-        - reader-mode
-        - recent-posts
+        - "@quartz-community/reader-mode"
       positions:
         right: []
     canvas: {}

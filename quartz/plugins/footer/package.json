@@ -1,5 +1,5 @@
 {
-  "name": "custom-footer",
+  "name": "footer",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -17,20 +17,20 @@
     "esbuild": "^0.28.2"
   },
   "quartz": {
-    "name": "custom-footer",
-    "displayName": "Custom Footer",
-    "description": "Site footer with links, without version or year.",
+    "name": "footer",
+    "displayName": "Footer",
+    "description": "Site footer with social icons and an about link.",
     "version": "1.0.0",
     "category": "component",
     "defaultEnabled": true,
     "components": {
       "Footer": {
-        "name": "custom-footer",
+        "name": "footer",
         "displayName": "Footer",
-        "description": "Site footer with links.",
+        "description": "Site footer with social icons and an about link.",
         "version": "1.0.0",
         "defaultPosition": "footer",
-        "defaultPriority": 50
+        "defaultPriority": 10
       }
     }
   }

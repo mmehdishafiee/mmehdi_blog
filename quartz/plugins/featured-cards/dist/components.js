@@ -1,0 +1,223 @@
+// components.tsx
+import { resolveRelative } from "@quartz-community/utils";
+import { Fragment, jsx, jsxs } from "preact/jsx-runtime";
+var FeaturedCards = () => {
+  const Component = ({ allFiles, fileData }) => {
+    if (fileData.slug !== "index") {
+      return null;
+    }
+    const featured = allFiles.filter((file) => file.frontmatter?.featured).sort((a, b) => {
+      const orderA = a.frontmatter?.order ?? Infinity;
+      const orderB = b.frontmatter?.order ?? Infinity;
+      if (orderA !== orderB) {
+        return orderA - orderB;
+      }
+      const dateA = new Date(a.frontmatter?.date ?? 0).getTime();
+      const dateB = new Date(b.frontmatter?.date ?? 0).getTime();
+      return dateB - dateA;
+    }).slice(0, 4);
+    if (featured.length === 0) {
+      return null;
+    }
+    return /* @__PURE__ */ jsxs(Fragment, { children: [
+      /* @__PURE__ */ jsx("h2", { class: "featured-cards-title", children: "\u{1F381} \u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u0647\u0627\u06CC \u0627\u0646\u062A\u062E\u0627\u0628\u06CC" }),
+      /* @__PURE__ */ jsx("div", { class: "card-grid-container", children: /* @__PURE__ */ jsx("div", { class: "card-grid", children: featured.map((page) => {
+        const { title, description, image } = page.frontmatter;
+        const style = image ? { "--card-bg": `url(${image})` } : {};
+        return /* @__PURE__ */ jsxs(
+          "a",
+          {
+            href: resolveRelative(fileData.slug, page.slug),
+            class: `card-container ${image ? "has-image" : "no-image"}`,
+            style,
+            children: [
+              /* @__PURE__ */ jsx("div", { class: "card-bg" }),
+              /* @__PURE__ */ jsxs("div", { class: "card-content", children: [
+                /* @__PURE__ */ jsx("h3", { children: title }),
+                /* @__PURE__ */ jsx("p", { children: description })
+              ] })
+            ]
+          }
+        );
+      }) }) })
+    ] });
+  };
+  Component.css = `
+.featured-cards-title {
+  margin-bottom: 1rem;
+  font-size: clamp(1.55rem, 1.25rem + 1vw, 1.85rem);
+  text-align: start;
+}
+
+.card-grid-container {
+  container: featured-cards / inline-size;
+  margin: 1rem 0 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.card-container {
+  display: block;
+  position: relative;
+  min-height: 15rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  border: none;
+  border-radius: var(--radius-card, 18px);
+  background: rgba(255, 255, 255, 0.1);
+  text-align: start;
+  text-decoration: none;
+  z-index: 0;
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.38) 48%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.card-container:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+  box-shadow:
+    0 0 0 6px var(--light),
+    0 0 0 9px var(--secondary);
+  z-index: 2;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card-container.no-image .card-bg {
+  background: linear-gradient(135deg, #655f6c, #45434c 55%, #30343a);
+}
+
+.card-content {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: start;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem;
+  color: #ffffff !important;
+  font-size: clamp(1.85rem, 1.5rem + 1cqi, 2.4rem);
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.card-content p {
+  margin: 0;
+  color: #f3f4f6 !important;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+@container featured-cards (max-width: 35.99rem) {
+  .card-grid {
+    gap: 0.75rem;
+  }
+
+  .card-container:not(:first-child) {
+    min-height: 9rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .card-container:not(:first-child) .card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-container:not(:first-child) .card-content p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    font-size: 0.9rem;
+  }
+}
+
+@container featured-cards (min-width: 36rem) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-container:nth-child(1),
+  .card-container:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .card-container:nth-child(1) {
+    min-height: 20rem;
+  }
+}
+
+@container featured-cards (min-width: 60rem) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card-container:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 24rem;
+  }
+
+  .card-container:nth-child(4) {
+    grid-column: span 3;
+  }
+}
+
+.card-container.has-image .card-bg {
+  filter: grayscale(70%);
+  transform: scale(1);
+  transition: filter 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.card-container.has-image:is(:hover, :focus-visible) .card-bg {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-container.has-image .card-bg {
+    transition: none;
+  }
+
+  .card-container.has-image:is(:hover, :focus-visible) .card-bg {
+    transform: none;
+  }
+}
+
+[saved-theme="dark"] .card-container {
+  background: rgba(30, 30, 30, 0.8);
+}
+`;
+  return Component;
+};
+export {
+  FeaturedCards
+};

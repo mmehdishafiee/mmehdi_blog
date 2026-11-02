@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: 25-lessons-from-turning-25
 commentId: 25-lessons-from-turning-25
+image: "/attachments/25-درس-از-24-سالگی.ir_.png"
+description: ۲۵ درس برای زندگی، به بهانهی تولد
+featured: true
+order: 2
 ---
 
 [کوین کلی](https://en.wikipedia.org/wiki/Kevin_Kelly_(editor))، یه عادت بامزه داشت که به مناسبت تولدش، به تعداد عدد سال تولدش (یعنی مثلاً اگه 50 سالش شده، 50 تا) توصه/ نصیحت رو روی وبلاگش می‌نوشت و منتشر می‌کرد. ( چیزی که [به مناسبت تولد 68 سالگی‌](68-bits-of-unsolicited-advice.md)ش نوشت رو اینجا ترجمه کرده بودم قبلاً. می‌تونید بخونید.)

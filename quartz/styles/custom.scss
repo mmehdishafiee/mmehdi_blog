@@ -1,43 +1,209 @@
 @use "./variables.scss" as *;
+@use "./print.scss" as print;
 
-$vazirmatn: Vazirmatn, sans-serif;
+.footnotes > ol {
+  padding-inline: 40px;
+}
 
+@font-face {
+  font-family: "Ray-ExtraBold";
+  src: url("/static/fonts/Ray-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// put your custom CSS here!
+
+// A matte, uniform canvas keeps Persian text and imagery crisp in both themes.
 :root {
-  // Things theme reads these overrides after quartz-fonts loads.
-  --font-text-override: #{$vazirmatn};
-  --font-interface-override: #{$vazirmatn};
-  --font-text-theme: #{$vazirmatn};
-  --font-interface-theme: #{$vazirmatn};
+  --paper-surface: #f7f5ef;
+  --content-surface: #ffffff;
+  --surface-border: color-mix(in srgb, var(--gray) 48%, transparent);
+  --radius-panel: 20px;
+  --radius-card: 18px;
+  --radius-control: 10px;
+
+  // The theme plugin that used to supply these is disabled, so pin them here.
+  --titleFont: "Ray-ExtraBold", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --headerFont: "Ray-ExtraBold", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+:root[saved-theme="dark"] {
+  --paper-surface: var(--light);
+  --content-surface: var(--lightgray);
+}
+
+body {
+  background-color: var(--paper-surface);
+  min-height: 100vh;
+}
+
+// Global Box Sizing & Overflow Fixes
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// base.scss sets html { width: 100vw; overflow-x: hidden } — 100vw overflows on
+// mobile, and overflow:hidden on html/body breaks position:sticky on sidebars.
 html {
-  font-family: $vazirmatn !important;
+  font-family: Vazirmatn, sans-serif !important;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
-body,
-.callout,
-.callout .callout-title-inner,
-.callout .callout-content,
-.search > .search-button,
-.search > .search-button > p,
-.search .search-bar,
-.search .search-bar::placeholder,
-.explorer,
-.explorer .nav-file-title,
-.explorer .nav-folder-title,
-.explorer .folder-title,
-.explorer .folder-button,
-.explorer .tree-item-self,
-.explorer-content {
-  font-family: var(--bodyFont, $vazirmatn) !important;
+body {
+  max-width: 100%;
+  width: 100%;
 }
 
-.breadcrumb-element p {
-  margin: 0 0.5rem 0 0;
+// Main content container: a rounded surface panel on the paper canvas.
+.center {
+  background-color: var(--content-surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-panel);
+  padding: 32px !important;
+  margin-top: 2rem !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: $mobileBreakpoint) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page > #quartz-body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  // base.scss min-width: 100% on grid children can force horizontal overflow
+  .page > #quartz-body .center,
+  .page > #quartz-body footer {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .center {
+    padding: 20px !important;
+    border-radius: var(--radius-panel);
+    margin-top: 1rem !important;
+  }
+}
+
+[saved-theme="dark"] .center {
+  background-color: var(--content-surface);
+}
+
+// Index page-header only holds featured cards now (article meta is excluded via layout)
+body[data-slug="index"] .page-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+// Enhanced Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+}
+
+// Give existing homepage sections an editorial rhythm without changing the
+// typography or spacing of individual article pages.
+body[data-slug="index"] .center article {
+  h1,
+  h2 {
+    font-size: clamp(1.55rem, 1.25rem + 1vw, 1.95rem);
+    line-height: 1.35;
+    margin-block: 3rem 0.4rem;
+  }
+
+  h1:first-child,
+  h2:first-child {
+    margin-block-start: 1.75rem;
+  }
+
+  :is(h1, h2) + p {
+    margin-block: 0 1rem;
+  }
+}
+
+// Fix for footnote references causing extra line-height
+sup {
+  line-height: 0;
+  vertical-align: super;
+  font-size: 0.75em;
+  margin-left: 2px;
+
+  a[data-footnote-ref] {
+    line-height: 0;
+    vertical-align: baseline;
+  }
+}
+
+// Each separator belongs to the preceding crumb. Use the same gap within
+// and between crumbs instead of physical margins that skew spacing in RTL.
+.page-header .breadcrumb-container {
+  gap: 0.4rem;
+}
+
+.breadcrumb-container .breadcrumb-element {
+  gap: 0.4rem;
+}
+
+.breadcrumb-container .breadcrumb-element p {
+  margin: 0;
   padding: 0;
   line-height: normal;
 }
 
+button#explorer .fold {
+  opacity: 0.8;
+  transition: transform 0.3s;
+}
+
+// The fold chevron sits on the physical left in stock styles; pull it to the
+// start of the row so it leads the folder title in RTL.
 .explorer .fold {
   opacity: 0.8;
   margin-left: 0 !important;
@@ -45,7 +211,7 @@ body,
   transition: transform 0.3s;
 }
 
-.content-meta[show-comma="true"] > *:not(:last-child) {
+.content-meta[show-comma="true"] > span:not(:last-child) {
   margin-left: 8px !important;
   margin-right: 0px !important;
 }
@@ -58,6 +224,15 @@ body,
 .folder-icon {
   margin-right: 0px !important;
   margin-left: 5px !important;
+}
+
+.explorer {
+  border: 1px solid var(--gray);
+  border-radius: var(--radius-control);
+  padding: 10px;
+  font-size: 1rem;
+  background: var(--content-surface);
+  border: 1px solid var(--surface-border);
 }
 
 // Nested explorer list: stock indents/borders on the physical left; mirror for RTL.
@@ -82,12 +257,12 @@ button.toc-header .fold {
 
 ul.toc-content.overflow .depth-0 {
   padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-right: 1rem !important;
 }
 
 ul.toc-content.overflow .depth-1 {
   padding-left: 0 !important;
-  padding-right: 1rem !important;
+  padding-right: 1.5rem !important;
 }
 
 ul.toc-content.overflow .depth-2 {
@@ -97,56 +272,344 @@ ul.toc-content.overflow .depth-2 {
 
 ul.toc-content.overflow .depth-3 {
   padding-left: 0 !important;
-  padding-right: 3rem !important;
+  padding-right: 2.5rem !important;
 }
 
 ul.toc-content.overflow .depth-4 {
   padding-left: 0 !important;
-  padding-right: 4rem !important;
+  padding-right: 3rem !important;
 }
 
 ul.toc-content.overflow .depth-5 {
   padding-left: 0 !important;
-  padding-right: 5rem !important;
+  padding-right: 3.5rem !important;
 }
 
 ul.toc-content.overflow .depth-6 {
   padding-left: 0 !important;
-  padding-right: 6rem !important;
+  padding-right: 4rem !important;
+}
+
+/* Backlinks styles moved to component stylesheet (quartz/components/styles/backlinks.scss) */
+
+// Margin fix in tag pages
+
+li.section-li > .section > .meta {
+  margin: 0 0 0 1em !important;
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(90deg) !important;
 }
 
-.mobile-only > .search {
-  padding-inline-start: 10px !important;
+// Keep the site footer close to the content panel. The plugin's 2rem top
+// margin previously stacked with another 2rem of padding here.
+.page > #quartz-body > footer {
+  text-align: center;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0 2rem;
+}
+
+footer ul {
+  display: unset;
 }
 
 code {
   direction: ltr !important;
+  unicode-bidi: isolate;
+  font-family: "Fira Code", "IBM Plex Mono", monospace;
+  font-size: 0.9em;
 }
 
-h2#footnote-label {
-  visibility: hidden;
+time {
+  unicode-bidi: isolate;
 }
 
-h2#footnote-label::after {
-  content: "پانوشت‌ها";
-  visibility: visible;
+// Enhanced Code Blocks
+pre {
+  border-radius: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+pre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  opacity: 0.8;
+}
+
+.search {
+  max-width: unset;
+  position: relative;
+  border-radius: var(--radius-control);
+  overflow: visible;
+}
+
+.search > #search-icon {
+  background-color: unset !important;
+  border: 1px solid var(--gray) !important;
+}
+
+.search input {
+  border-radius: var(--radius-control);
+  padding: 12px 20px 12px 45px;
+  border: 1px solid var(--surface-border);
+  background: var(--light);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.search input:focus {
+  background: var(--content-surface);
+  border-color: var(--secondary);
+}
+
+// Search is a visible control, not a pale placeholder on the paper canvas.
+.sidebar.left .search > .search-button {
+  min-height: 2.75rem;
+  padding-inline: 0.5rem;
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-control);
+  background: var(--content-surface);
+}
+
+.sidebar.left .search > .search-button > p {
+  color: var(--darkgray);
+}
+
+div.search.mobile-only {
+  padding-inline: 0.5rem 1.5rem;
+  margin-inline-end: auto;
+}
+
+.center img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Farsi Blockquote
+
+.farsi-blockquote,
+.markdown-preview-view .farsi-blockquote {
+  position: relative;
+  direction: rtl !important;
+  unicode-bidi: isolate;
+  text-align: right !important;
+
+  max-width: var(--max-width);
+  margin: 1.25em auto !important;
+  padding-block: 0 !important;
+  padding-inline-start: 1.5rem !important;
+
+  background: none !important;
+  border: none !important;
+  border-inline-start: 1px solid var(--gray) !important;
+  box-shadow: none !important;
+
+  font-size: inherit !important;
+  line-height: inherit;
+  color: var(--text-normal) !important;
+}
+
+.farsi-blockquote::before,
+.markdown-preview-view .farsi-blockquote::before {
+  content: "\00AB" !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.farsi-blockquote::after,
+.markdown-preview-view .farsi-blockquote::after {
+  content: none !important;
+}
+
+.farsi-blockquote-black {
+  color: var(--text-normal) !important;
+}
+
+.farsi-blockquote .farsi-footer,
+blockquote .farsi-footer,
+.markdown-preview-view blockquote .farsi-footer {
   display: block;
+  margin-top: 0.75em !important;
+  padding: 0;
+  direction: rtl !important;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--darkgray);
 }
 
-blockquote {
-  border-right: 3px solid var(--secondary);
-  border-left: none;
-  margin: 1rem 0;
-  padding-right: 1rem;
-  padding-left: 0;
-  transition: border-color 0.2s;
+blockquote footer:before {
+  content: "— ";
 }
 
-/* Tag pills: drop the large gray highlight box; keep the # marker + accent color */
+.markdown-preview-view blockquote:not(.callout):not(.farsi-blockquote):not(.english-blockquote) {
+  direction: rtl;
+
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-block: 0;
+  padding-inline-start: var(--nested-padding);
+
+  border-inline-start: 2px solid var(--text-muted) !important;
+  border-inline-end: unset;
+
+  color: var(--text-muted);
+}
+
+blockquote:not(.callout):not(.farsi-blockquote):not(.english-blockquote) {
+  direction: rtl;
+
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-block: 0;
+  padding-inline-start: var(--nested-padding);
+
+  border-inline-end: unset;
+
+  font-size: 17px;
+  color: var(--text-muted);
+  width: var(--line-width-adaptive);
+}
+
+blockquote:not(.farsi-blockquote):not(.english-blockquote)::before {
+  content: none !important;
+}
+
+// English Blockquote
+
+html[dir="rtl"] blockquote.english-blockquote,
+html[dir="rtl"] .english-blockquote,
+.english-blockquote,
+.markdown-preview-view .english-blockquote {
+  position: relative;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  text-align: left !important;
+
+  max-width: var(--max-width);
+  margin: 1.25em auto !important;
+  padding-block: 0 !important;
+  padding-inline-start: 1.5rem !important;
+
+  background: none !important;
+  border: none !important;
+  border-inline-start: 1px solid var(--gray) !important;
+  box-shadow: none !important;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: inherit !important;
+  font-style: italic;
+  line-height: inherit;
+  color: var(--text-normal) !important;
+}
+
+.english-blockquote::before,
+.markdown-preview-view .english-blockquote::before {
+  content: "\201C" !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gray);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.english-blockquote::after,
+.markdown-preview-view .english-blockquote::after {
+  content: none !important;
+}
+
+.english-blockquote .english-footer,
+blockquote .english-footer,
+.markdown-preview-view blockquote .english-footer {
+  display: block;
+  margin-top: 0.75em !important;
+  padding: 0;
+  direction: ltr !important;
+  text-align: right;
+  font-family: var(--bodyFont);
+  font-size: 0.85rem;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  color: var(--darkgray);
+}
+
+// Highlight Coloring
+
+.text-highlight {
+  font-weight: normal;
+  background-color: transparent;
+  padding: 1px 5px 1px 5px;
+  border-radius: 5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  transition: background 200ms ease;
+  background-image: linear-gradient(120deg, var(--secondary), var(--secondary));
+}
+
+.text-highlight:hover {
+  background-size: 100% 100%;
+}
+
+// Smooth link color transitions
+a {
+  transition: color 0.2s ease;
+}
+
+// In reading content, reveal links with a fine underline rather than moving
+// text or decorating navigation, images, and heading anchor controls.
+.center article a:is(.internal, .external):not(:has(> img)):not([role="anchor"]) {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.center
+  article
+  a:is(.internal, .external):not(:has(> img)):not([role="anchor"]):is(:hover, :focus-visible) {
+  text-decoration-color: currentColor;
+}
+
+// No global anchor pseudo-element: component-specific link decorations can still render.
+// Internal links retain the accent color without a heavy glow.
+a.internal {
+  background-color: transparent !important;
+  padding: 0 !important;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a.internal:hover {
+  color: var(--tertiary);
+}
+
+/* Tag pills: base.scss paints a highlight box behind every .internal link;
+   keep tags as plain "#tag" text in the accent color. */
 a.internal.tag-link,
 a.tag-link,
 .tag-link {
@@ -169,6 +632,44 @@ a.tag-link::before {
   content: "#";
   margin-inline-end: 0.15em;
   color: var(--gray);
+}
+
+// Center tables
+
+.table-container > table {
+  margin: auto;
+}
+
+/* Customize website's scrollbar like Mac OS
+Not supported in Firefox and IE */
+
+body {
+  scrollbar-color: var(--gray) var(--paper-surface);
+  scrollbar-width: auto;
+}
+
+body::-webkit-scrollbar {
+  background-color: var(--paper-surface);
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--paper-surface);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 16px;
+  border: 4px solid var(--paper-surface);
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+th {
+  text-align: center !important;
 }
 
 // Quartz Themes expect --callout-title-color; bridge from per-callout accent color.
@@ -194,6 +695,517 @@ a.tag-link::before {
   }
 }
 
+// Obsidian callouts are blockquotes — keep RTL text but don't inherit quote bar styling
+blockquote.callout,
+.markdown-preview-view blockquote.callout {
+  width: auto;
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-radius: 5px;
+  direction: rtl;
+}
+
+.callout.is-collapsed > .callout-title > .fold-callout-icon {
+  transform: rotate(90deg);
+}
+
+h2#footnote-label {
+  visibility: hidden;
+  direction: rtl !important;
+}
+
+h2#footnote-label::after {
+  content: "پانوشتها";
+  visibility: visible;
+  display: block;
+}
+
+div > ul > li > a {
+  font-weight: 400;
+}
+
+// Mermaid: diagrams stay centered with body text styling.
+.mermaid {
+  direction: rtl !important;
+  text-align: center;
+}
+
+pre:has(> code.mermaid) {
+  background-color: transparent;
+}
+
+.nodeLabel {
+  font-family: var(--bodyFont);
+}
+
+.edgeLabel {
+  font-family: var(--bodyFont);
+  background-color: var(--content-surface) !important;
+}
+
+pre:has(> code.mermaid) .clipboard-button {
+  display: none;
+}
+
+// Latex LTR
+
+.katex-display {
+  direction: ltr;
+}
+
+.katex {
+  direction: ltr;
+  display: inline-block;
+}
+
+// title logo — keep square aspect (plugin CSS must not set a fixed height)
+.title-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  img,
+  #icon-header {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: $desktopBreakpoint) {
+  .sidebar .title-logo img,
+  .sidebar .title-logo #icon-header {
+    width: 136px;
+  }
+}
+
+@media (max-width: $mobileBreakpoint) {
+  .title-logo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    img,
+    #icon-header {
+      width: 75px;
+    }
+  }
+
+  #header-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 1.25rem;
+  }
+
+  .page > #quartz-body .sidebar.left {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 0;
+    gap: 0.5rem;
+    padding: 1.25rem 0.5rem 0.75rem;
+    margin-top: 0 !important;
+  }
+
+  .page-title-container {
+    align-items: center;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-title {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  // This wrapper contains only desktop toggles; keep the mobile buttons below.
+  .sidebar.left > .flex-component {
+    display: none;
+  }
+
+  // Keep the mobile theme/search controls visible and give them their own row.
+  .page > #quartz-body .sidebar.left > .mobile-only {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .page > #quartz-body .sidebar.left > .mobile-only:has(.search) {
+    flex: 1 1 10rem;
+  }
+
+  .page > #quartz-body .sidebar.left > .mobile-only .search {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .sidebar.left > .mobile-only > .darkmode {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-control);
+    background: var(--content-surface);
+  }
+
+  // The plugin absolutely positions its icon for a 20px-wide button.
+  // Use normal flex alignment inside our larger mobile control instead.
+  .sidebar.left > .mobile-only > .darkmode svg {
+    position: static;
+    inset: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-logo {
+    gap: 0.5rem;
+  }
+
+  .title-logo img,
+  .title-logo #icon-header {
+    width: 60px;
+  }
+
+  #header-text {
+    font-size: 1.3rem;
+  }
+}
+
+#header-text {
+  color: var(--secondary);
+
+  &:hover {
+    color: var(--tertiary);
+  }
+}
+
+// Sidebar toggles: dark mode + reader mode side-by-side, centered above search
+.sidebar.left > .flex-component {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: $desktopBreakpoint) {
+  .sidebar.left > .search {
+    width: 100%;
+  }
+}
+
+#icon-header {
+  margin: 0;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Keep breadcrumbs and printing on one compact row; remaining header
+// components (title, metadata, featured image) still occupy the full width.
+.page-header > .popover-hint:has(> .print-actions) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.75rem;
+
+  > * {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  > .breadcrumb-container {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+  }
+
+  > .print-actions {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+}
+
+// Page Header styling
+.page-header {
+  padding-top: 0 !important;
+  padding-bottom: 0.5rem;
+}
+
+.breadcrumb-container {
+  margin-top: 0 !important;
+  font-family: var(--headerFont);
+  font-size: 0.95rem;
+  font-weight: 100;
+
+  a {
+    color: var(--darkgray);
+  }
+
+  p {
+    color: var(--darkgray);
+  }
+}
+
+.article-title {
+  font-size: 2.75rem;
+}
+
+.content-meta {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--lightgray);
+  font-size: 0.9rem;
+  color: var(--darkgray);
+
+  time::before,
+  span::before {
+    content: "";
+  }
+
+  &[show-comma="true"] > *:not(:last-child)::after {
+    content: " • ";
+    color: var(--darkgray);
+    margin-inline: 0.5rem;
+  }
+}
+
+// Desktop: sticky sidebars (grid items must not stretch to full row height)
+@media (min-width: $desktopBreakpoint) {
+  .page-header {
+    margin: 0rem auto 0 !important;
+  }
+
+  .page > #quartz-body .sidebar {
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+    height: auto;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin-top: 7rem !important;
+  }
+}
+
+// Image Grid
+.img-grid,
+article.img-grid {
+  // Handle images directly in paragraphs
+  > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    > img {
+      flex: 1;
+      min-width: 200px;
+      width: 100%;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+
+  // Keep the existing selectors for compatibility
+  article > div:has(> img) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  article > div:has(> img) > * {
+    flex: 1;
+    min-width: 200px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  article > div:has(> img) > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Make sure paragraphs with images inside are properly handled
+  article > div:has(> p:has(> img)) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  article > div:has(> p:has(> img)) > p {
+    flex: 1;
+    min-width: 200px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  article > div:has(> p:has(> img)) > p > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // Support for internal embeds that contain images
+  article > div:has(> .internal-embed:has(> img)) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  article > div:has(> .internal-embed:has(> img)) > .internal-embed {
+    flex: 1;
+    min-width: 200px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  article > div:has(> .internal-embed:has(> img)) > .internal-embed > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// align page header on non-desktop (article meta only; logo stays centered)
+@media (max-width: $mobileBreakpoint) {
+  .page-header {
+    align-items: flex-start;
+  }
+}
+
+// Recent Notes ul fix
+.recent-notes .recent-ul {
+  list-style: none !important;
+  padding-right: 0 !important;
+}
+
+[saved-theme="dark"] .search input {
+  background: var(--lightgray);
+  color: var(--dark);
+}
+
+[saved-theme="dark"] .explorer {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+}
+
+// A solid, theme-aware surface is calmer and remains legible without blur.
+.glass {
+  background: var(--content-surface);
+  border-radius: 20px;
+  border: 1px solid var(--lightgray);
+}
+
+// Vertical rhythm line between the left sidebar and the content column.
+@media (min-width: $desktopBreakpoint) {
+  .sidebar.left {
+    border-inline-end: 1px solid var(--surface-border);
+    padding-inline-end: 3rem !important;
+  }
+
+  // Keep the graph on the homepage and articles, but let it occupy less of
+  // the sidebar. Its renderer needs at least 250px of height for its canvas.
+  .sidebar.right .graph {
+    width: min(100%, 15rem);
+    align-self: center;
+  }
+
+  .sidebar.right .graph > .graph-outer {
+    border-color: var(--surface-border);
+    border-radius: var(--radius-control);
+  }
+}
+
+// Section dividers (opt-in via .section-divider in content)
+.section-divider {
+  width: 100%;
+  height: 80px;
+  margin: 2rem 0;
+  color: var(--gray);
+  pointer-events: none;
+  opacity: 0.8;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+[saved-theme="dark"] .section-divider {
+  color: var(--lightgray);
+  opacity: 0.3;
+}
+
+/* Recent Notes Styling Fix */
+.recent-notes .recent-ul li .section .desc {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 1rem !important;
+  width: 100%;
+  direction: rtl;
+}
+
+.recent-notes .recent-ul li .section .desc time {
+  margin: 0 !important;
+  margin-left: 10px !important;
+  color: var(--darkgray) !important;
+  font-size: 0.85rem !important;
+  white-space: nowrap !important;
+  opacity: 1 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+
+.recent-notes .recent-ul li .section .desc .recent-title {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: var(--secondary) !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.recent-notes .recent-ul li .section .desc .recent-title:hover {
+  color: var(--tertiary) !important;
+  text-decoration: underline !important;
+}
+
+// Tag pills inside list views: stock pushes them to the physical left.
+.section-li > .section > .tags {
+  justify-content: flex-start !important;
+}
+
 .page article {
   li.task-list-item,
   li:has(> input[type="checkbox"]) {
@@ -211,8 +1223,19 @@ a.tag-link::before {
   }
 }
 
-// Explorer RTL overrides (mobile)
+// note-properties disclosure arrow is built on border-right; mirror it for RTL.
+.note-properties .note-properties-header::before {
+  border-right: none;
+  border-left: 2px solid var(--darkgray);
+  transform: rotate(45deg);
+}
+
+.note-properties[open] > .note-properties-header::before {
+  transform: rotate(-45deg);
+}
+
 @media all and ($mobile) {
+  // Explorer drawer: slide in from the physical right edge in RTL.
   html[dir="rtl"] .page > #quartz-body.lock-scroll > :not(.sidebar.left:has(.explorer)) {
     transform: translateX(-100dvw);
   }
@@ -236,23 +1259,4 @@ a.tag-link::before {
   }
 }
 
-// Table headers: stock aligns them to the physical left; RTL needs right.
-th {
-  text-align: right;
-}
-
-// Tag pills inside list views: stock pushes them to the physical left.
-.section-li > .section > .tags {
-  justify-content: flex-start !important;
-}
-
-// note-properties disclosure arrow is built on border-right; mirror it for RTL.
-.note-properties .note-properties-header::before {
-  border-right: none;
-  border-left: 2px solid var(--darkgray);
-  transform: rotate(45deg);
-}
-
-.note-properties[open] > .note-properties-header::before {
-  transform: rotate(-45deg);
-}
+@include print.styles;
