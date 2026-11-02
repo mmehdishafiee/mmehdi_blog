@@ -1,5 +1,4 @@
 @use "./variables.scss" as *;
-@use "./print.scss" as print;
 
 .footnotes > ol {
   padding-inline: 40px;
@@ -914,32 +913,6 @@ pre:has(> code.mermaid) .clipboard-button {
   }
 }
 
-// Keep breadcrumbs and printing on one compact row; remaining header
-// components (title, metadata, featured image) still occupy the full width.
-.page-header > .popover-hint:has(> .print-actions) {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  column-gap: 0.75rem;
-
-  > * {
-    grid-column: 1 / -1;
-    min-width: 0;
-  }
-
-  > .breadcrumb-container {
-    grid-column: 1;
-    grid-row: 1;
-    align-items: center;
-  }
-
-  > .print-actions {
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0;
-  }
-}
-
 // Page Header styling
 .page-header {
   padding-top: 0 !important;
@@ -1258,5 +1231,3 @@ article.img-grid {
     }
   }
 }
-
-@include print.styles;

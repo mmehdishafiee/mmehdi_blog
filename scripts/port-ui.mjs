@@ -33,22 +33,6 @@ const plugins = [
     priority: 5,
   },
   {
-    dir: "print-button",
-    exportName: "PrintButton",
-    displayName: "Print Button",
-    description: "Print / save-as-PDF button shown next to the breadcrumbs.",
-    position: "beforeBody",
-    priority: 8,
-  },
-  {
-    dir: "print-source",
-    exportName: "PrintSource",
-    displayName: "Print Source",
-    description: "Canonical page URL printed at the foot of printed pages.",
-    position: "afterBody",
-    priority: 90,
-  },
-  {
     dir: "footer",
     exportName: "Footer",
     displayName: "Footer",

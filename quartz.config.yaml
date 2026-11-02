@@ -207,18 +207,6 @@ plugins:
       position: beforeBody
       priority: 22
       condition: not-index
-  - source: ./quartz/plugins/print-button
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 8
-      condition: not-index
-  - source: ./quartz/plugins/print-source
-    enabled: true
-    layout:
-      position: afterBody
-      priority: 90
-      condition: not-index
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
