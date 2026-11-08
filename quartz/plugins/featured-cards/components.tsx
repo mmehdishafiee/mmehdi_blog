@@ -13,7 +13,21 @@ import { resolveRelative } from "@quartz-community/utils"
  * `description` becomes the caption. Without `image` the card falls back to the
  * neutral gradient in the `.no-image` rule below.
  */
-export const FeaturedCards: QuartzComponentConstructor = () => {
+
+interface Options {
+  /** Heading of the section. Defaults to "یادداشت‌های منتخب". */
+  title?: string
+  /** Maximum number of cards. */
+  limit?: number
+}
+
+/** "یادداشت‌های منتخب" */
+const DEFAULT_TITLE = "\u06cc\u0627\u062f\u062f\u0627\u0634\u062a\u200c\u0647\u0627\u06cc \u0645\u0646\u062a\u062e\u0628"
+
+export const FeaturedCards: QuartzComponentConstructor<Options | undefined> = (opts) => {
+  const title = opts?.title ?? DEFAULT_TITLE
+  const limit = opts?.limit ?? 4
+
   const Component: QuartzComponent = ({ allFiles, fileData }: QuartzComponentProps) => {
     if (fileData.slug !== "index") {
       return null
@@ -33,7 +47,7 @@ export const FeaturedCards: QuartzComponentConstructor = () => {
         const dateB = new Date((b.frontmatter?.date as string | number | Date) ?? 0).getTime()
         return dateB - dateA
       })
-      .slice(0, 4)
+      .slice(0, limit)
 
     if (featured.length === 0) {
       return null
@@ -41,11 +55,13 @@ export const FeaturedCards: QuartzComponentConstructor = () => {
 
     return (
       <>
-        <h2 class="featured-cards-title">یادداشتهای انتخابی</h2>
+        <h2 class="featured-cards-title">{title}</h2>
         <div class="card-grid-container">
           <div class="card-grid">
             {featured.map((page) => {
-              const { title, description, image } = page.frontmatter!
+              const title = page.frontmatter?.title as string | undefined
+              const description = page.frontmatter?.description as string | undefined
+              const image = page.frontmatter?.image as string | undefined
               const style = image ? { "--card-bg": `url(${image})` } : {}
 
               return (
@@ -57,7 +73,7 @@ export const FeaturedCards: QuartzComponentConstructor = () => {
                   <div class="card-bg"></div>
                   <div class="card-content">
                     <h3>{title}</h3>
-                    <p>{description as string}</p>
+                    {description && <p>{description}</p>}
                   </div>
                 </a>
               )

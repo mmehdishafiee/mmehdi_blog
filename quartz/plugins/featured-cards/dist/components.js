@@ -1,7 +1,10 @@
 // quartz/plugins/featured-cards/components.tsx
 import { resolveRelative } from "@quartz-community/utils";
 import { Fragment, jsx, jsxs } from "preact/jsx-runtime";
-var FeaturedCards = () => {
+var DEFAULT_TITLE = "\u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u200C\u0647\u0627\u06CC \u0645\u0646\u062A\u062E\u0628";
+var FeaturedCards = (opts) => {
+  const title = opts?.title ?? DEFAULT_TITLE;
+  const limit = opts?.limit ?? 4;
   const Component = ({ allFiles, fileData }) => {
     if (fileData.slug !== "index") {
       return null;
@@ -15,14 +18,16 @@ var FeaturedCards = () => {
       const dateA = new Date(a.frontmatter?.date ?? 0).getTime();
       const dateB = new Date(b.frontmatter?.date ?? 0).getTime();
       return dateB - dateA;
-    }).slice(0, 4);
+    }).slice(0, limit);
     if (featured.length === 0) {
       return null;
     }
     return /* @__PURE__ */ jsxs(Fragment, { children: [
-      /* @__PURE__ */ jsx("h2", { class: "featured-cards-title", children: "\u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u0647\u0627\u06CC \u0627\u0646\u062A\u062E\u0627\u0628\u06CC" }),
+      /* @__PURE__ */ jsx("h2", { class: "featured-cards-title", children: title }),
       /* @__PURE__ */ jsx("div", { class: "card-grid-container", children: /* @__PURE__ */ jsx("div", { class: "card-grid", children: featured.map((page) => {
-        const { title, description, image } = page.frontmatter;
+        const title2 = page.frontmatter?.title;
+        const description = page.frontmatter?.description;
+        const image = page.frontmatter?.image;
         const style = image ? { "--card-bg": `url(${image})` } : {};
         return /* @__PURE__ */ jsxs(
           "a",
@@ -33,8 +38,8 @@ var FeaturedCards = () => {
             children: [
               /* @__PURE__ */ jsx("div", { class: "card-bg" }),
               /* @__PURE__ */ jsxs("div", { class: "card-content", children: [
-                /* @__PURE__ */ jsx("h3", { children: title }),
-                /* @__PURE__ */ jsx("p", { children: description })
+                /* @__PURE__ */ jsx("h3", { children: title2 }),
+                description && /* @__PURE__ */ jsx("p", { children: description })
               ] })
             ]
           }

@@ -199,8 +199,14 @@ plugins:
       position: right
       priority: 50
       display: mobile-only
+  # Cardهای «یادداشت‌های منتخب» در صفحهٔ خانه. هر یادداشتی که در frontmatter خودش
+  # `featured: true` داشته باشد اینجا می‌آید؛ `order` جای کارت، `description`
+  # جملهٔ زیر عنوان و `image` تصویر پس‌زمینه است (هر دو اختیاری).
   - source: ./quartz/plugins/featured-cards
     enabled: true
+    options:
+      title: "یادداشت‌های منتخب"
+      limit: 4
     layout:
       position: beforeBody
       priority: 7
