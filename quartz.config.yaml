@@ -382,9 +382,7 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content:
-      exclude:
-        - "@quartz-community/recent-notes"
+    content: {}
     folder:
       exclude:
         - "@quartz-community/reader-mode"

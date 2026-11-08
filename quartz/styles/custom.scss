@@ -1174,6 +1174,12 @@ article.img-grid {
   text-decoration: underline !important;
 }
 
+// Posts show their own table of contents under the graph; the recent-notes
+// box belongs to the homepage only.
+body:not([data-slug="index"]) .sidebar.right .recent-notes {
+  display: none;
+}
+
 // Tag pills inside list views: stock pushes them to the physical left.
 .section-li > .section > .tags {
   justify-content: flex-start !important;
