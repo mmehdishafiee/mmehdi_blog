@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: chinese-social-credit-system
 commentId: chinese-social-credit-system
+featured: false
+order:
+description:
+image: ""
 ---
 
 چیزی که در ادامه قراره بخونید، یکی از مطالب مجله «[دانستنیها](https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%D9%86%DB%8C%D9%87%D8%A7)»ست. مجله محبوب من.  

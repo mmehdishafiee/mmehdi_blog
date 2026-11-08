@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Slope-and-Content-Creation
 commentId: Slope-and-Content-Creation
+featured: false
+order:
+description:
+image: ""
 ---
 [ست گادین](https://motamem.org/%D8%B3%D8%AA-%DA%AF%D8%A7%D8%AF%DB%8C%D9%86/) توی [کتاب شیب](https://motamem.org/%DA%A9%D8%AA%D8%A7%D8%A8-%D8%B4%DB%8C%D8%A8/) (The Dip) می‌گه وقتی قدم در مسیر جدیدی می‌ذاریم، کارها آسون جلو می‌رن و سریع پاداش هر قدمی رو که بر می‌داریم دریافت می‌کنیم.  
   

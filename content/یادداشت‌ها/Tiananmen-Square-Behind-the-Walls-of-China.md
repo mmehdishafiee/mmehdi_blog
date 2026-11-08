@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Tiananmen-Square-Behind-the-Walls-of-China
 commentId: Tiananmen-Square-Behind-the-Walls-of-China
+featured: false
+order:
+description:
+image: ""
 ---
 مطمئنم که همه آوازه دیوار چین رو شنیدیم؛ همون طولانی‌ترین و بزرگ‌ترین سازه‌ی دفاعی....  
   

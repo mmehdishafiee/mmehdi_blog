@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Language-Dynamics-Either-a-Spark-or-a-Fire-Spreader
 commentId: Language-Dynamics-Either-a-Spark-or-a-Fire-Spreader
+featured: false
+order:
+description:
+image: ""
 ---
 یک: Dirty Storm اصطلاحی علمی‌ست و به رویداد نادری اطلاق می‌شه که (اگر اشتباه نکنم و برعکس توضیح ندم) فوران آتشفشان باعث به‌وجود اومدن ساعقه می‌شه.  
   

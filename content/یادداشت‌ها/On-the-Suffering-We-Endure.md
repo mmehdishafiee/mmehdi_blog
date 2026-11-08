@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: On-the-Suffering-We-Endure
 commentId: On-the-Suffering-We-Endure
+featured: false
+order:
+description:
+image: ""
 ---
 بدن انسان برای این همه یکجا نشستن طراحی نشده. و احتمالاً از [انسان راست قامت](https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%B3%D8%A7%D9%86_%D8%B1%D8%A7%D8%B3%D8%AA%E2%80%8C%D9%82%D8%A7%D9%85%D8%AA) به این طرف ما رکورد دار نشستنیم. که این رکورد داری م عوارضی داره.  
   

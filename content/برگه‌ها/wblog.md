@@ -2,6 +2,10 @@
 title: "ویکی وبلاگ"
 draft: false
 original_slug: "wblog"
+featured: false
+order:
+description:
+image: ""
 ---
 
 ![](/attachments/لاگ-وبلاگ.png)

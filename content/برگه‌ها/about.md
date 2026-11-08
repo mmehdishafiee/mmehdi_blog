@@ -2,6 +2,10 @@
 title: "درباره من"
 draft: false
 original_slug: "about"
+featured: false
+order:
+description:
+image: ""
 ---
 
 من، [محمد مهدی شفیعی](https://mmehdi.ir) هستم؛ متولد سال 1379. ساکن یکی از دهات‌های **استان فارس**.

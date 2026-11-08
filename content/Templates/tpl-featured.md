@@ -3,6 +3,10 @@ title: راهنمای یادداشت‌های منتخب
 draft: true
 tags:
   - راهنما
+featured: false
+order:
+description:
+image: ""
 ---
 
 # «یادداشت‌های منتخب» چطور کار می‌کند؟

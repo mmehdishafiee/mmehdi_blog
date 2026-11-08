@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: A-Term-The-Eternal-September
 commentId: A-Term-The-Eternal-September
+featured: false
+order:
+description:
+image: ""
 ---
 خلاصه بخوام بگم؛ وقتی سرعت جذب کاربر از سرعت تعلیم اون‌ها بیشتر بشه، کاربران جدید به‌سختی می‌تونن - نمی‌تونن- خودشون رو با فرهنگ و هنجار‌های محیط/ ابزار جدید سازگار کنند.  
 این اتفاق باعث مشکلات عدیده‌ای می‌شه که همه‌ ما احتمالاً یک نمونه‌اش رو توی فضای وب فارسی دیدیم.  

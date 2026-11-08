@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: shekargah-mmehdi-ir
 commentId: shekargah-mmehdi-ir
+featured: false
+order:
+description:
+image: ""
 ---
 الان که به لطف هوش مصنوعی، ساخت محصول (product) خیلی آسون و سریع شده، محصولات ایرانی زیادی داره ساخته می‌شه.  
   

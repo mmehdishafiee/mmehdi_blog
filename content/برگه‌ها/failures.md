@@ -2,6 +2,10 @@
 title: "گالری شکست‌ها"
 draft: false
 original_slug: "failures"
+featured: false
+order:
+description:
+image: ""
 ---
 
 ## آلبوم شکست‌ها

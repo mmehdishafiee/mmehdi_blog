@@ -8,6 +8,10 @@ recommend_level: ""
 draft: false
 original_slug: "persian-blogs"
 commentId: persian-blogs
+featured: false
+order:
+description:
+image: ""
 ---
 
 من به لیست‌ها و دایرکتوری‌ها علاقه دارم. به وبلاگ‌های شخصی هم. این شد که با خودم گفتم بد نیست که یک لیست کامل با کمی توضیحات از وبلاگ‌های شخصی فارسی درست کنم و با بقیه به اشتراک بگذارم.

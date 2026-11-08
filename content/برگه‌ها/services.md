@@ -2,6 +2,10 @@
 title: "خدمات من"
 draft: false
 original_slug: "services"
+featured: false
+order:
+description:
+image: ""
 ---
 **سلام**
 

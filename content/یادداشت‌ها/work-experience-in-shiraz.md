@@ -5,6 +5,10 @@ tags:
 draft: true
 original_slug: work-experience-in-shiraz
 commentId: work-experience-in-shiraz
+featured: false
+order:
+description:
+image: ""
 ---
 اولین کار تخصصی (مارکتینگ) حضوری و تمام وقت من برمی‌گرده به کار کردن در بوم‌وند.
 بوم‌وند یه استارت‌اپ در حوزه گردشگریه که توی بندرعباس هم هست.

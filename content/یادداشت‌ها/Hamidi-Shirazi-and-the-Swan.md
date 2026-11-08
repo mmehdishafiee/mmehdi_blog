@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Hamidi-Shirazi-and-the-Swan
 commentId: Hamidi-Shirazi-and-the-Swan
+featured: false
+order:
+description:
+image: ""
 ---
 قو حیوان زیبا و عجیبیه. نظریه‌ای درمورد یک دسته از قوها (قوهای گنگ یا Mute Swan) وجود داره که احتمال میده این دسته از غازیان مرگ‌آگاهی (زمان مرگ خودش رو می‌دونند) دارند.  
   

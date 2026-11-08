@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Daily-Notes
 commentId: Daily-Notes
+featured: false
+order:
+description:
+image: ""
 ---
 عادت جدیدی که مدتیه دارم سعی می‌کنم ایجادش کنم، هر روز نوشتنه.  
 فعلاً ساده شروع کردم. سعی می‌کنم هر روز (درواقع هر شب) خلاصه‌ای از انچه اتفاق افتاد و آنچه بر من گذشت رو بنویسم برای خودم.  

@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Experience-Using-Didar-CRM-as-a-Freelancer
 commentId: Experience-Using-Didar-CRM-as-a-Freelancer
+featured: false
+order:
+description:
+image: ""
 ---
 از وقتی که ایده آژانس دیدبرتر رو شروع کردم، سفارش‌های سمت من بیشتر شد و خب به‌طبعش مدیریت و پیگیریش هم سخت‌تر شد.  
 برای همین رفتم سراغ نرم‌افزارهای CRM. از قبل دیدار رو میشناختم اما قبل از شروع استفاده بازار نرم‌افزارها رو بررسی کردم و به این نتیجه رسیدم که بهترین نرم‌افزار مناسب فریلنسرها و کسب‌وکارهای کوچک همین دیداره.  

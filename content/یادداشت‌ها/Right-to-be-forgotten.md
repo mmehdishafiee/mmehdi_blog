@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Right-to-be-forgotten
 commentId: Right-to-be-forgotten
+featured: false
+order:
+description:
+image: ""
 ---
 حق فراموش شد(Right to be forgotten) یکی از موضوعات جدید مربوط به **حریم خصوصیه** که در ایران کمتر بهش پرداخته شده.  
   

@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Guidelines-for-the-Sterilization-of-Students
 commentId: Guidelines-for-the-Sterilization-of-Students
+featured: false
+order:
+description:
+image: ""
 ---
 [آیین نامه انضباطی دانشجویان](https://fa.m.wikipedia.org/wiki/%D8%A2%DB%8C%DB%8C%D9%86_%D9%86%D8%A7%D9%85%D9%87_%D8%A7%D9%86%D8%B6%D8%A8%D8%A7%D8%B7%DB%8C_%D8%AF%D8%A7%D9%86%D8%B4%D8%AC%D9%88%DB%8C%D8%A7%D9%86)، متن قانونی هست که به استناد اون به تخلفات و جرایم دانشجویان رسیدگی می‌کنند.  
   

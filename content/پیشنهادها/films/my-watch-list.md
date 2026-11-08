@@ -8,6 +8,10 @@ recommend_level: ""
 draft: false
 original_slug: "my-watch-list"
 commentId: my-watch-list
+featured: false
+order:
+description:
+image: ""
 ---
 
 من خودم رو فیلم‌باز ( به معنای: کسی که خیلی فیلم می‌بینه، نقدها رو می‌‌خونه و شاید می‌‌نویسه و..) نمی‌دونم. اما می‌تونم بگم به نسبت اطرافیانم بیشتر فیلم می‌بینم و فیلم دیدن رو دوست دارم.

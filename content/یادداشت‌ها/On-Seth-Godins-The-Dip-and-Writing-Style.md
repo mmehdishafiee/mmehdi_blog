@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: On-Seth-Godins-The-Dip-and-Writing-Style
 commentId: On-Seth-Godins-The-Dip-and-Writing-Style
+featured: false
+order:
+description:
+image: ""
 ---
   
 🤔 **موضوع کتاب:**  

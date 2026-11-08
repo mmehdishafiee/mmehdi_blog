@@ -8,6 +8,10 @@ source_url: ""
 draft: false
 original_slug: "patrick-collison"
 commentId: patrick-collison
+featured: false
+order:
+description:
+image: ""
 ---
 
 من اول با مدل فکری پاتریک کالیسون آشنا شدم و بعد با خودش. [امین کاکاوند](https://kakavand.me) توی این پست خوبش از [مدل فکری پاتریک](https://kakavand.me/patrick-collison/) حرف زده بود که برای من خیلی جالب بود. ( مطلب امین رو هم از دست ندید بچه‌ها)

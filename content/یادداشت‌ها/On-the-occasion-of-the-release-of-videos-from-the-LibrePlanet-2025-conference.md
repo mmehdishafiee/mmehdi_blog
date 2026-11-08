@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: On-the-occasion-of-the-release-of-videos-from-the-LibrePlanet-2025-conference
 commentId: On-the-occasion-of-the-release-of-videos-from-the-LibrePlanet-2025-conference
+featured: false
+order:
+description:
+image: ""
 ---
 دوم اردیبهشت بود که [این پیام](https://t.me/sudoshz/771) رو فرستادم برای دوست عزیزم، سرة الروح، اصلا یادم نمیاد که با چه هدفی اما بعد از تعریف از نگارش این پیام برام نوشت:  
 

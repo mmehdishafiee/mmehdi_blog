@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: loneliest-whale
 commentId: loneliest-whale
+featured: false
+order:
+description:
+image: ""
 ---
 
 یکی از حیواناتی که در این دهه‌ها توجه زیادی رو به خودش جلب کرده یک نهنگ است. نهنگ ۵۲ هرتزی، یا تنهاترین نهنگ؛ احتمالاً یکی از این عناوین را شنیده‌اید، یا نه یکی از آثار موسیقی که الهام گرفته از زندگی این نهنگ هستند.

@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: The-Etymology-of-the-Word-Nostalgia-and-a-Free-Interpretation
 commentId: The-Etymology-of-the-Word-Nostalgia-and-a-Free-Interpretation
+featured: false
+order:
+description:
+image: ""
 ---
 والریا لوئیزلی توی کتاب اگر به خودم برگردم (که مجموعه جستارهای رواییه) داستان شکل گرفتن کلمه **نوستالژی** رو شرح می‌ده که خوندنش برای من خیلی جذاب بود.  
   

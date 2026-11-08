@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: On-Reducing-Dependence-on-the-Internet
 commentId: On-Reducing-Dependence-on-the-Internet
+featured: false
+order:
+description:
+image: ""
 ---
 از بعد از جنگ 12 روزه، بچه‌های فنی، مخصوصاً دوستانی که توی حوزه مارکتینگ کار می‌کردن (چه اون‌هایی که متخصص این حوزه بودن چه اون‌هایی که [تصمیم‌سازی](https://motamem.org/%D8%AA%D9%81%D8%A7%D9%88%D8%AA-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%DA%AF%DB%8C%D8%B1%DB%8C-%D8%AA%D8%B5%D9%85%DB%8C%D9%85-%D8%B3%D8%A7%D8%B2%DB%8C/) می‌کردن.) به تکاپو افتادن که چی کار کنیم که اگر در آینده اینترنت قطع شد، دسترسی کاربر به سایت ما و همینطور دسترسی گوگل به سایت ما قطع نشه. (این قطعاً یه چالش و مشکله. کاملاً درک می‌کنم.)  
   

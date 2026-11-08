@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Podcast-Introduction-Herolic-Podcast
 commentId: Podcast-Introduction-Herolic-Podcast
+featured: false
+order:
+description:
+image: ""
 ---
 هیرولیک، یه پادکست روایتی جذاب از دنیای ابرقهرمان‌هاست که هر قسمت به یکی از شخصیت‌های معروف کمیک و سینما می‌پردازه.  
   

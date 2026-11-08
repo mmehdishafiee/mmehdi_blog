@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Soroush-and-a-New-Advertising-Medium
 commentId: Soroush-and-a-New-Advertising-Medium
+featured: false
+order:
+description:
+image: ""
 ---
 
   

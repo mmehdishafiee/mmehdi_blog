@@ -8,6 +8,10 @@ recommend_level: ""
 draft: false
 original_slug: "online-books"
 commentId: online-books
+featured: false
+order:
+description:
+image: ""
 ---
 
 کتاب های زیادی هستن که به صورت آزاد ترجمه (یا تألیف) شدن و به صورت رایگان منتشر (منظورم در سطح اینترنت هست) من هروقت به یکی از این کتاب‌ها بر می‌خوردم اون رو برای خودم بوک‌مارک می‌کردم که بعداً برم سراغش و بخونم.

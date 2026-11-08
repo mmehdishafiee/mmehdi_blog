@@ -2,6 +2,10 @@
 title: "تصادف با یک دیالوگ"
 draft: false
 original_slug: "random-quotes-from-movies"
+featured: false
+order:
+description:
+image: ""
 ---
 
 > جالبه که تو چهل سالگی‌ت یه جوری باشی غیر از بقیه. تو بیست سالگی که همه شاعرن.

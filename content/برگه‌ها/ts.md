@@ -2,6 +2,10 @@
 title: شهر *من* بخند
 draft: true
 original_slug: ts
+featured: false
+order:
+description:
+image: ""
 ---
 
 این صفحه حاوی مطالب اضافی و به نوعی کامل کننده آلبوم شهر من بخند گروه پالته.  

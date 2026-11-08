@@ -2,6 +2,10 @@
 title: "ارتباط با محمد مهدی شفیعی"
 draft: false
 original_slug: "l"
+featured: false
+order:
+description:
+image: ""
 ---
 
 ![محمد مهدی شفیعی](https://mmehdi.ir/wp-content/uploads/elementor/thumbs/cropped-mmehdi-FAV-p5gguaqrmqrqgq6gcche53nblr64sesmtndjwhrgo8.png "cropped-mmehdi-FAV.png")

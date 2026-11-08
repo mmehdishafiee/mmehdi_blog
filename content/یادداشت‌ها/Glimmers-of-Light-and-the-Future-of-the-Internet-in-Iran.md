@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Glimmers-of-Light-and-the-Future-of-the-Internet-in-Iran
 commentId: Glimmers-of-Light-and-the-Future-of-the-Internet-in-Iran
+featured: false
+order:
+description:
+image: ""
 ---
 امروز و فردای فیلترنت در ایران تیره‌تر از همیشه است. (می‌گویم فیلترنت، چون آنچه داشتیم نیز اینترنت نبود. هرجا هم درمورد آنچه در ایران داریم سهواً نوشتم اینترنت، فیلترنت بخونید.)  
   

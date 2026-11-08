@@ -2,6 +2,10 @@
 title: "نقل قول‌های پراکنده"
 draft: false
 original_slug: "random-quotes"
+featured: false
+order:
+description:
+image: ""
 ---
 
 اینجا نقل قول‌های مختلفی می‌ذارم که واقعاً ازشون یادگرفتم و  دوست دارم شما هم بخونید و شاید ازش یاد گرفتید….

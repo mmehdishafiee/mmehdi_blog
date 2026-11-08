@@ -9,6 +9,10 @@ recommend_level: ""
 draft: true
 original_slug: element
 commentId: element
+featured: false
+order:
+description:
+image: ""
 ---
 
 این بار با شروع محدودیت‌های اینترنتی، صاحبان ما تصمیم گرفتند که واتساپ و اینستاگرام رو به طور کامل از دسترس ما خارج کنند. واتساپ اصلی‌ترین پیام‌رسان در ایران بود که با فیلترشدنش، مسئله جانشینی اون مسئله مهمیه.

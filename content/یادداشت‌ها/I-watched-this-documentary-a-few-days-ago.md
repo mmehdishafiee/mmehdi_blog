@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: I-watched-this-documentary-a-few-days-ago
 commentId: I-watched-this-documentary-a-few-days-ago
+featured: false
+order:
+description:
+image: ""
 ---
 ![[Pasted image 20261030225233.png]]
 

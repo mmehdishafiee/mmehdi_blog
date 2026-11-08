@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Decision-Making-and-Shabanali-A-Good-Question-Is-the-Whole-Answer
 commentId: Decision-Making-and-Shabanali-A-Good-Question-Is-the-Whole-Answer
+featured: false
+order:
+description:
+image: ""
 ---
 ![[Pasted image 20261030224109.png]]
 

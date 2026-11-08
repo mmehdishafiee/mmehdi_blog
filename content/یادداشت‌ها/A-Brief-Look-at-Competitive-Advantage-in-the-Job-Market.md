@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: A-Brief-Look-at-Competitive-Advantage-in-the-Job-Market
 commentId: A-Brief-Look-at-Competitive-Advantage-in-the-Job-Market
+featured: false
+order:
+description:
+image: ""
 ---
 آخرین چیزی که یادگرفتم، این بود که چیزهایی رو که از دوره، کلاس و یا کتاب یادمی‌گیرم به اون صورت مزیت رقابتی من محسوب نمی‌شه. چون افراد دیگه‌ای هم اون دوره رو شرکت کردن، یا اون کتاب رو خوندن.  
   

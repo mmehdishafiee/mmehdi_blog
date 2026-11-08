@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Jordan-Peterson-and-Rules-for-Life
 commentId: Jordan-Peterson-and-Rules-for-Life
+featured: false
+order:
+description:
+image: ""
 ---
 توی [پادکست پرسه پرونده نظم و آشوب](https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8yYzBkMTIxNC9wb2RjYXN0L3Jzcw/episode/MTg5ZGUyNjItZmJkOS00NjUzLWE5MGQtYmI4YmQ2ZDU5OTZl?sa=X&ved=0CA0QkfYCahcKEwj4r6b0xJTwAhUAAAAAHQAAAAAQAQ) که گفتم عباس سیدین درمورد جردن پیترسون حرف می‌زنه؛ به دوتا از کتاب‌های پیترسون هم اشاره میکنه و قسمت‌هایی از کتاب کتاب 12 قانون زندگی ( به انگلیسی **12 Rules for Life: An Antidote to Chaos**) رو شرح میده.  
   

@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: About-the-book-Economic-Perspective
 commentId: About-the-book-Economic-Perspective
+featured: false
+order:
+description:
+image: ""
 ---
 دو سه روز پیش این کتاب رو تموم کردم؛ اول که مقدمه رو می‌خوندم،‌ به نظرم اومد که کتاب اشتباهی خریدم و این کتاب مناسب من نیست. (حتی توی ذهنم داشتم به کسایی که بهم معرفی‌ش کرده بودن داشتم فحش می‌دادم)  
 اما همون فصل اول بعد از مقدمه کافی بود که کتاب رو یک نفس بخونم و تموم کنم.  

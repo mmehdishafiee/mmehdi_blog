@@ -5,6 +5,10 @@ tags:
 draft: true
 original_slug: report-for-the-year-1404-khanomi
 commentId: report-for-the-year-1404-khanomi
+featured: false
+order:
+description:
+image: ""
 ---
 نمی‌دونم چرا نرخ فروش رو با تورم مقایسه کردن
 نسبت به سال گذشته از 321 نفر شدن 300 نفر

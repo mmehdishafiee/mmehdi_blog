@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Content-Creation-and-the-Long-Game
 commentId: Content-Creation-and-the-Long-Game
+featured: false
+order:
+description:
+image: ""
 ---
 اول: اینکه بازی بلند مدت چیه، بمونه برای یک وقت دیگه؛ به دو دلیل: یک، صادقانه خودم هم هنوز کامل درکش نکردم. دو، از حوصله این متن خارجه.  
 اما تولید محتوا (ی متنی احتمالاً) برای من یک بازی بلند مدته.  

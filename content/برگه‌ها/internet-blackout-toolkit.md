@@ -2,6 +2,10 @@
 title: جعبه ابزار خاموشی
 draft: true
 original_slug: internet-blackout-toolkit
+featured: false
+order:
+description:
+image: ""
 ---
 
 اینترنت بدون آدم‌هایی که دوست داشته باشی باهاشون در ارتباط باشی فایده‌ای نداره.

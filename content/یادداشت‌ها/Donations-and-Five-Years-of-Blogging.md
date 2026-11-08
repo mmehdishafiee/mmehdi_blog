@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Donations-and-Five-Years-of-Blogging
 commentId: Donations-and-Five-Years-of-Blogging
+featured: false
+order:
+description:
+image: ""
 ---
 [کافیته](https://www.coffeete.ir/)، به مناسبت تحویل سال یه ویدیو درست کرده از عملکرد دریافت‌ حمایت‌های مالی (دونیت) من. (روی پلتفرم خودشون)  
   

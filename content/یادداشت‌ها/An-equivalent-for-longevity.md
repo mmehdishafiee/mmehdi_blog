@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: An-equivalent-for-longevity
 commentId: An-equivalent-for-longevity
+featured: false
+order:
+description:
+image: ""
 ---
 این روزها توی وب فارسی از لانجویتی زیاد می‌نویسند. اما متأسفانه هیچ کس به خودش زحمت نداده برای این کلمه معادلی پیدا کنه، یا اگر نیست بسازه.  
   

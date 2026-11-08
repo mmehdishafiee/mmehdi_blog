@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: advice-clothing-and-life
 commentId: advice-clothing-and-life
+featured: false
+order:
+description:
+image: ""
 ---
 نصیحت‌ها مثل لباسن. باید اون‌ها رو امتحان کنی و اگه مناسبت نبودن، کنار بذاری‌شون و یه چیز دیگه رو امتحان کنی.  
   

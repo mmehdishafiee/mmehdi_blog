@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: A-new-comment-and-perspective-on-the-job
 commentId: A-new-comment-and-perspective-on-the-job
+featured: false
+order:
+description:
+image: ""
 ---
 حسین جعفری عزیز روی مطلب من با عنوان [به دیگران گوش نکنید؛ کنکور مهمه و تأثیرگذار](https://mmehdi.ir/blog/concours/) کامنت (دیدگاه) زیر رو گذاشته:  
   

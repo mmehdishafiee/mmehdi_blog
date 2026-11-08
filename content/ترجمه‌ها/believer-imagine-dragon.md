@@ -8,6 +8,10 @@ source_url: ""
 draft: false
 original_slug: "believer-imagine-dragon"
 commentId: believer-imagine-dragon
+featured: false
+order:
+description:
+image: ""
 ---
 
 Believer اولین آهنگی هست که من از بند Imagine Dragon شنیدم. و حالا توی این پست ترجمه آهنگ Believer رو گذاشتم. این آهنگ هم از دو جهت برام مهمه. یک اینکه من با این آهنگ با این بند آشنا شدم. دو هم اینکه معنی و فلسفه این آهنگ رو دوست دارم.

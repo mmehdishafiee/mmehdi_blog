@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: karnakon-seo-internship
 commentId: karnakon-seo-internship
+featured: false
+order:
+description:
+image: ""
 ---
 
 از اوایل ماه گذشته‌(11 ام بهمن) توی [دوره کارآموزی سئو](http://aminaramesh.ir/1399/11/16/seo6) با امین آرامش شرکت کردم. که این شد مشغله‌ای روی همه مشغله‌های دیگه‌ام.

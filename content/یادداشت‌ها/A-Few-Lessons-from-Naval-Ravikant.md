@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: A-Few-Lessons-from-Naval-Ravikant
 commentId: A-Few-Lessons-from-Naval-Ravikant
+featured: false
+order:
+description:
+image: ""
 ---
 چیزی که می‌خونید، ترجمه یه رشته توییته که توی [خبرنامه دفترچه یادداشت](https://open.substack.com/pub/mmehdishafiee/p/footnote-1) منتشرش کردم.  
   

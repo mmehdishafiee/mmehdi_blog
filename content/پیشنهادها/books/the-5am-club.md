@@ -8,6 +8,10 @@ recommend_level: ""
 draft: false
 original_slug: "the-5am-club"
 commentId: the-5am-club
+featured: false
+order:
+description:
+image: ""
 ---
 
 چند مدت پیش توی گودریزد نظرم رو درمورد کتاب باشگاه پنج صبحی ها نوشتم. اما گفتم که بد نیست نقد و نظرم رو درباره کتاب اینجا هم منتشر کنم.

@@ -2,6 +2,10 @@
 title: طرح صیانت
 draft: true
 original_slug: internet
+featured: false
+order:
+description:
+image: ""
 ---
 
 ![](/attachments/طرح-صیانت-1024x429.png)

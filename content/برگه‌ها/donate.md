@@ -2,6 +2,10 @@
 title: "حمایت مالی"
 draft: false
 original_slug: "donate"
+featured: false
+order:
+description:
+image: ""
 ---
 
 سلام!

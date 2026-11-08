@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: In-honor-of-the-freedom-fighters
 commentId: In-honor-of-the-freedom-fighters
+featured: false
+order:
+description:
+image: ""
 ---
 جادی ([امیر عماد میرمیرانی](https://fa.m.wikipedia.org/wiki/%D8%AC%D8%A7%D8%AF%DB%8C_%D9%85%DB%8C%D8%B1%D9%85%DB%8C%D8%B1%D8%A7%D9%86%DB%8C))، [میلاد نوری](https://irfoundr.com/milad-nouri/)، [عادل](https://atalebi.com/) خان (طالبی) و [ضیا صدر](https://www.ziyasadr.com/).  
 این لیست که می‌تونه بلندتر باشه، فعالان دیجیتالی هستند که توی این برحه، به سراغ‌شون رفتن، برای پاره‌ای از توضیحات! من اسم این عزیزان رو نوشتم چون ارتباط بیشتری رو با این‌ها داشتم.  

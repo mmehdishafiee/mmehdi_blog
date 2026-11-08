@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: All-pieces-of-advice-are-descriptions-of-ones-own-life
 commentId: All-pieces-of-advice-are-descriptions-of-ones-own-life
+featured: false
+order:
+description:
+image: ""
 ---
 ![[Pasted image 20261030225120.png]]
 

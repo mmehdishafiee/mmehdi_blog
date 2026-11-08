@@ -2,6 +2,10 @@
 title: "آموزه‌های پراکنده"
 draft: false
 original_slug: "taughts"
+featured: false
+order:
+description:
+image: ""
 ---
 
 چیزایی که از افراد مختلف رو یاد گرفتم و فکر میکنم میشه خارج از کانتکست ازشون یادگرفت رو کم کم می‌ذارم توی این برگه....

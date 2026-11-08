@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Collection-of-beautiful-animations-with-Daniyal
 commentId: Collection-of-beautiful-animations-with-Daniyal
+featured: false
+order:
+description:
+image: ""
 ---
 دانیال یه کانال باحال داره به اسم [کالکشن انیمیشن‌های زیبا](https://t.me/collectionanimation) که توی بیوش نوشته:  
   

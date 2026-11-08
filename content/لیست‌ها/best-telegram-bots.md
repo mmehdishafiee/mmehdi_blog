@@ -5,6 +5,10 @@ tags: [لیست]
 draft: false
 original_slug: "best-telegram-bots"
 commentId: best-telegram-bots
+featured: false
+order:
+description:
+image: ""
 ---
 
 نمی‌دونم یادتون هست یا نه، اما فکر می‌کنم اولین قابلیت متفاوتی که تلگرام اضافه کرد، ربات‌ها بودن. اوایل کاربرد خاصی نداشتند اما به مرور بهتر و بهتر شدن و امروز می‌شه با استفاده از ربات‌های تلگرام خیلی کارها کرد.

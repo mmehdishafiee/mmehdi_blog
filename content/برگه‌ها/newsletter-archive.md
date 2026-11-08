@@ -2,6 +2,10 @@
 title: "آرشیو خبرنامه کوله پشتی"
 draft: false
 original_slug: "newsletter-archive"
+featured: false
+order:
+description:
+image: ""
 ---
 
 در این صفحه، شماره‌های منتشر شده از [خبرنامه کوله](newsletter.md) پشتی را می‌توانید مشاهده کنید.

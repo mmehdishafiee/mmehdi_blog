@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: hello-world
 commentId: hello-world
+featured: false
+order:
+description:
+image: ""
 ---
 
 > به وردپرس خوش آمدید. این اولین نوشتهٔ شماست. این را ویرایش یا حذف کنید، سپس نوشتن را شروع نمایید!

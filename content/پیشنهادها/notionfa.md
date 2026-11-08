@@ -8,6 +8,10 @@ recommend_level: ""
 draft: false
 original_slug: "notionfa"
 commentId: notionfa
+featured: false
+order:
+description:
+image: ""
 ---
 
 سلام!

@@ -8,6 +8,10 @@ source_url: ""
 draft: false
 original_slug: "dance-me-to-the-end-of-love-leonard-cohen"
 commentId: dance-me-to-the-end-of-love-leonard-cohen
+featured: false
+order:
+description:
+image: ""
 ---
 
 به‌نظر این آهنگ **لئونارد کوهن** نقطه شروع خوبی برای آشنایی و ورود به دنیای اون هست؛ برای همین تصمیم گرفتم متن و ترجمه Dance Me رو به عنوان اولین آهنگ از اون ترجمه کنم.

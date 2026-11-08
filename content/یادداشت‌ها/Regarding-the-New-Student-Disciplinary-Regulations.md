@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Regarding-the-New-Student-Disciplinary-Regulations
 commentId: Regarding-the-New-Student-Disciplinary-Regulations
+featured: false
+order:
+description:
+image: ""
 ---
 دو سال پیش، همراه با جریان اعتراضات، صاحبان ما (!) تصمیم گرفتن که شیوه‌نامه انضباطی دانشجویان رو هم تغییر بدن تا دست‌شون برای اقدامات‌شون باز‌تر از قبل بشه.  
   

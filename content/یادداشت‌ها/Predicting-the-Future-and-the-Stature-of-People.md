@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: Predicting-the-Future-and-the-Stature-of-People
 commentId: Predicting-the-Future-and-the-Stature-of-People
+featured: false
+order:
+description:
+image: ""
 ---
 ما آدم‌ها پیش‌بینی رو دوست داریم. هم انجام دادنش رو، هم شنیدن و خوندن پیش‌بینی افراد درمورد آینده چیزهای مختلف. (از آینده پول و کریپتوکارنسی تا بورس و جنبش‌های اجتماعی)  
   

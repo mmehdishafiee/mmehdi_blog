@@ -8,6 +8,10 @@ source_url: ""
 draft: false
 original_slug: "68-bits-of-unsolicited-advice"
 commentId: 68-bits-of-unsolicited-advice
+featured: false
+order:
+description:
+image: ""
 ---
 
 [کوین کلی](https://en.wikipedia.org/wiki/Kevin_Kelly_(editor))، نویسنده و هم‌بنیان‌گذار [وایرد](https://fa.wikipedia.org/wiki/%D9%88%D8%A7%DB%8C%D8%B1%D8%AF)ه. یه ماهانامه که نسخه دیجیتال هم داره. کوین کلی که الان 70 سالشه بسیار فعال و سرزنده‌ست. یه وبلاگ داره که مرتب بروز می‌شه. یه خبرنامه داره. پادکست و کانال یوتیوب هم داره.

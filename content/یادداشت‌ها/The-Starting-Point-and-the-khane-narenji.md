@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: The-Starting-Point-and-the-khane-narenji
 commentId: The-Starting-Point-and-the-khane-narenji
+featured: false
+order:
+description:
+image: ""
 ---
 چهارشنبه گذشته رو رفتیم [سکوی نارنجی](https://evand.com/organizations/naaranji)‌. از سال 99 بود که با سکوی نارنجی آشنا شدم و هرکدوم از جلسه‌ها رو که بندر بودم رفتم. اما خب، تقریباً‌ توی هیچ‌کدوم از جلسه‌ها حرفی نمی‌زدم.  
   

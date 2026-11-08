@@ -5,6 +5,10 @@ tags:
 draft: false
 original_slug: class-based-internet
 commentId: class-based-internet
+featured: false
+order:
+description:
+image: ""
 ---
 
 پیش‌نوشت:  

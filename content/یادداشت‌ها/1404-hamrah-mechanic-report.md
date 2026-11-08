@@ -5,6 +5,10 @@ tags:
 draft: true
 original_slug: hamrah-mechanic-1404-report
 commentId: hamrah-mechanic-1404-report
+featured: false
+order:
+description:
+image: ""
 ---
 [21/07/1405 09:25] Mmehdi: گزارش سال 1404 همراه مکانیک  
 [21/07/1405 09:33] Mmehdi: دستاوردهاش گفته 115 درصد رشد نسبت به سال گذشته. البته گفته رشد درامد. که دقیق نیست.  

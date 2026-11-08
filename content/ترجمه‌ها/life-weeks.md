@@ -8,6 +8,10 @@ source_url: ""
 draft: false
 original_slug: "life-weeks"
 commentId: life-weeks
+featured: false
+order:
+description:
+image: ""
 ---
 
 این نمودار زندگی طولانی یک انسان بر اساس سال‌هاست:
