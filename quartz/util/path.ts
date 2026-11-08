@@ -1,4 +1,20 @@
 // Re-export shared path utilities from @quartz-community/utils
+import {
+  slugifyFilePath as baseSlugifyFilePath,
+  type FilePath,
+  type FullSlug,
+} from "@quartz-community/utils"
+import { mapLegacyFolder } from "./folder-map"
+
+/**
+ * Slugify a file path and translate the legacy Persian top-level folder name to
+ * its English URL slug (see ./folder-map). Every other segment is untouched, so
+ * the on-disk vault layout and the public URL scheme stay independent.
+ */
+export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
+  return mapLegacyFolder(baseSlugifyFilePath(fp, excludeExt)) as FullSlug
+}
+
 export {
   isFilePath,
   isFullSlug,
@@ -6,7 +22,6 @@ export {
   isRelativeURL,
   isAbsoluteURL,
   getFullSlug,
-  slugifyFilePath,
   simplifySlug,
   joinSegments,
   endsWith,

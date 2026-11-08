@@ -41,7 +41,7 @@ export const FeaturedCards: QuartzComponentConstructor = () => {
 
     return (
       <>
-        <h2 class="featured-cards-title">🎁 یادداشتهای انتخابی</h2>
+        <h2 class="featured-cards-title">یادداشتهای انتخابی</h2>
         <div class="card-grid-container">
           <div class="card-grid">
             {featured.map((page) => {

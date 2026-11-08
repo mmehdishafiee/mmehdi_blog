@@ -10,8 +10,6 @@ interface Options {
    * (`Telegram`, `GitHub`); unknown keys are skipped.
    */
   links?: Record<string, string>
-  /** Path of the about page, relative to the site root (no leading slash). */
-  aboutUrl?: string
 }
 
 const ICONS: Record<string, string> = {
@@ -23,11 +21,10 @@ const ICONS: Record<string, string> = {
 
 const ORDER = ["Telegram", "GitHub"]
 
-/** Site footer: a row of social icons plus a link to the about page. */
+/** Site footer: a row of social icons. */
 export const Footer: QuartzComponentConstructor<Options | undefined> = (opts) => {
   const Component: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     const links = opts?.links ?? {}
-    const aboutUrl = (opts?.aboutUrl ?? "about").replace(/^\/+/, "")
     const entries = ORDER.filter((label) => links[label]).map(
       (label) => [label, links[label]] as const,
     )
@@ -57,11 +54,6 @@ export const Footer: QuartzComponentConstructor<Options | undefined> = (opts) =>
             ))}
           </nav>
         )}
-        <div class="about-div">
-          <a class="about-link" href={`/${aboutUrl}`}>
-            درباره من
-          </a>
-        </div>
       </footer>
     )
   }
@@ -136,42 +128,6 @@ footer {
 .social-link:focus-visible {
   outline: 2px solid var(--secondary);
   outline-offset: 2px;
-}
-
-.about-div {
-  display: flex;
-  justify-content: center;
-}
-
-.about-link {
-  position: relative;
-  display: inline-block;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  color: var(--gray);
-  text-decoration: none;
-  padding: 0.3rem 0;
-  transition: color 0.25s ease;
-}
-
-.about-link::after,
-.about-link:hover::after,
-.about-link:focus::after,
-.about-link:focus-visible::after {
-  content: none !important;
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.about-link:hover {
-  color: var(--secondary);
-}
-
-.about-link:focus-visible {
-  outline: 2px solid var(--secondary);
-  outline-offset: 4px;
-  border-radius: 2px;
 }
 `
 

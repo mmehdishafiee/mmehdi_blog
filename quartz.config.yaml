@@ -85,7 +85,7 @@ plugins:
     order: 50
     layout:
       position: right
-      priority: 30
+      priority: 20
       display: desktop-only
   - source: "@quartz-community/crawl-links"
     enabled: true
@@ -135,6 +135,9 @@ plugins:
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
+  - source: ./quartz/plugins/legacy-redirects
+    enabled: true
+    order: 55
   - source: "@quartz-community/explicit-publish"
     enabled: false
   - source: "@quartz-community/alias-redirects"
@@ -163,7 +166,7 @@ plugins:
     layout:
       position: left
       priority: 50
-      display: desktop-only
+      display: all
   - source: "@quartz-community/graph"
     enabled: false
   - source: ./quartz/plugins/graph-local
@@ -201,6 +204,11 @@ plugins:
     layout:
       position: beforeBody
       priority: 7
+  - source: ./quartz/plugins/latest-notes
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 8
   - source: ./quartz/plugins/featured-image
     enabled: true
     layout:
@@ -256,6 +264,9 @@ plugins:
       group: toggles
   - source: "@quartz-community/breadcrumbs"
     enabled: true
+    options:
+      rootName: "خانه"
+      spacerSymbol: "❯"
     layout:
       position: beforeBody
       priority: 5
@@ -291,18 +302,17 @@ plugins:
       links:
         Telegram: https://t.me/Mmehdi_ir
         GitHub: https://github.com/mmehdishafiee/mmehdi_blog
-      aboutUrl: برگه‌ها/about
   # Superseded by @quartz-community/recent-notes, which now ships the
   # hideTagPages/hideFolderPages options that made this fork necessary.
   - source: ./quartz/plugins/recent-posts
     enabled: false
     options:
-      title: "آخرین نوشتهها"
+      title: "آخرین نوشته‌ها"
       limit: 5
   - source: "@quartz-community/recent-notes"
     enabled: true
     options:
-      title: "آخرین نوشتهها"
+      title: "آخرین نوشته‌ها"
       limit: 3
       linkToMore: false
       showTags: false
@@ -374,7 +384,7 @@ layout:
         right: []
     content:
       exclude:
-        - "@quartz-community/explorer"
+        - "@quartz-community/recent-notes"
     folder:
       exclude:
         - "@quartz-community/reader-mode"

@@ -1230,4 +1230,58 @@ article.img-grid {
       transform: translateX(100vw);
     }
   }
+
+  // Site menu ("مطالب") in the mobile header: a touch-sized hamburger that
+  // opens the same full-screen drawer the folder pages use.
+  .page > #quartz-body .sidebar.left > .explorer {
+    order: 0;
+    align-self: center;
+    flex: 0 0 auto;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .sidebar.left .explorer > .mobile-explorer {
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-control);
+    background: var(--content-surface);
+    z-index: 310;
+  }
+
+  .sidebar.left .explorer > .mobile-explorer .lucide-menu {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .sidebar.left .explorer .explorer-content {
+    z-index: 300;
+  }
+
+  // 801–1199px still gets the plugin's in-flow desktop toggle; centre it so it
+  // reads as a box under the other header controls.
+  .sidebar.left .explorer > .desktop-explorer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+// The mobile drawer must cover the whole viewport. The plugin positions it
+// absolutely against the sidebar (which is inset by the page padding), leaving
+// a sliver uncovered; pin it to the viewport instead.
+@media all and (max-width: 800px) {
+  .page > #quartz-body .sidebar.left .explorer .explorer-content {
+    position: fixed;
+    inset-block-start: 0;
+    right: 0;
+    left: auto;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    box-sizing: border-box;
+  }
 }

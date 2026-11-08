@@ -1,4 +1,4 @@
-// components.tsx
+// quartz/plugins/featured-cards/components.tsx
 import { resolveRelative } from "@quartz-community/utils";
 import { Fragment, jsx, jsxs } from "preact/jsx-runtime";
 var FeaturedCards = () => {
@@ -20,7 +20,7 @@ var FeaturedCards = () => {
       return null;
     }
     return /* @__PURE__ */ jsxs(Fragment, { children: [
-      /* @__PURE__ */ jsx("h2", { class: "featured-cards-title", children: "\u{1F381} \u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u0647\u0627\u06CC \u0627\u0646\u062A\u062E\u0627\u0628\u06CC" }),
+      /* @__PURE__ */ jsx("h2", { class: "featured-cards-title", children: "\u06CC\u0627\u062F\u062F\u0627\u0634\u062A\u0647\u0627\u06CC \u0627\u0646\u062A\u062E\u0627\u0628\u06CC" }),
       /* @__PURE__ */ jsx("div", { class: "card-grid-container", children: /* @__PURE__ */ jsx("div", { class: "card-grid", children: featured.map((page) => {
         const { title, description, image } = page.frontmatter;
         const style = image ? { "--card-bg": `url(${image})` } : {};

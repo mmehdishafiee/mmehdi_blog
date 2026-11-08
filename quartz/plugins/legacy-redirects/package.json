@@ -1,0 +1,17 @@
+{
+  "name": "legacy-redirects",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "legacy-redirects",
+    "displayName": "Legacy Persian Redirects",
+    "description": "Emits Cloudflare Pages _redirects rules from Persian URLs to the English slugs.",
+    "version": "1.0.0",
+    "category": "emitter",
+    "defaultEnabled": true
+  }
+}
