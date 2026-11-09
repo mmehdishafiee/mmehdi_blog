@@ -800,9 +800,9 @@ pre:has(> code.mermaid) .clipboard-button {
     border-radius: var(--radius-panel) !important;
   }
 
-  // Logo on the left, title and subtitle stacked to its right.
+  // RTL lockup: logo at the right edge, title and subtitle stacked to its left.
   .title-logo {
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -825,13 +825,7 @@ pre:has(> code.mermaid) .clipboard-button {
     align-items: flex-start;
     gap: 0.1rem;
     min-width: 0;
-    direction: ltr;
-    text-align: left;
-  }
-
-  .title-text > * {
-    direction: rtl;
-    unicode-bidi: isolate;
+    text-align: start;
   }
 
   #header-text {
@@ -839,7 +833,7 @@ pre:has(> code.mermaid) .clipboard-button {
     overflow-wrap: anywhere;
     font-size: 1.4rem;
     line-height: 1.25;
-    text-align: left;
+    text-align: start;
   }
 
   .title-subtitle {
@@ -848,7 +842,7 @@ pre:has(> code.mermaid) .clipboard-button {
     font-family: var(--bodyFont);
     font-size: 0.8rem;
     line-height: 1.4;
-    text-align: left;
+    text-align: start;
   }
 
   .page-title-container {
