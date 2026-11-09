@@ -5,8 +5,8 @@ tags:
 draft: false
 original_slug: the-death-knell-of-the-internet
 commentId: the-death-knell-of-the-internet
-image: "/attachments/ناقوس-مرگ-اینترنت.png"
-description: اینترنت ایران و نشانههای پایانش
+image: /attachments/ناقوس-مرگ-اینترنت.png
+description: اینترنت ایران و نشانه‌های پایانش
 featured: true
 order: 1
 ---

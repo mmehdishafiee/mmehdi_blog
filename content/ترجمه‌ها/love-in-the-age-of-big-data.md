@@ -1,15 +1,16 @@
 ---
-title: "عشق در عصر داده‌های بزرگ"
-date: "2026-04-15"
-tags: [ترجمه]
+title: عشق در عصر داده‌های بزرگ
+date: 2026-04-15
+tags:
+  - ترجمه
 source_title: ""
 source_author: ""
 source_url: ""
 draft: false
-original_slug: "love-in-the-age-of-big-data"
+original_slug: love-in-the-age-of-big-data
 commentId: love-in-the-age-of-big-data
-image: "/attachments/عشق-در-عصر-دادههای-بزرگ-1-954x1024.jpeg"
-description: وقتی الگوریتمها وارد زندگی عاشقانه میشوند
+image: /attachments/عشق-در-زمانه-داده-های-بزرگ-1024x612.jpeg
+description: وقتی الگوریتم‌ها وارد زندگی عاشقانه می‌شوند
 featured: true
 order: 3
 ---

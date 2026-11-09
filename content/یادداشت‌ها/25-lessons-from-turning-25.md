@@ -5,8 +5,8 @@ tags:
 draft: false
 original_slug: 25-lessons-from-turning-25
 commentId: 25-lessons-from-turning-25
-image: "/attachments/25-درس-از-24-سالگی.ir_.png"
-description: ۲۵ درس برای زندگی، به بهانهی تولد
+image: /attachments/25-درس-از-24-سالگی.ir_.png
+description: ۲۵ درس برای زندگی، به بهانه‌ی تولد
 featured: true
 order: 2
 ---

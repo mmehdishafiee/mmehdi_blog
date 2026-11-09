@@ -1,14 +1,15 @@
 ---
-title: "سطرچین | ٢١ درس برای قرن ٢١"
-date: "2026-05-10"
-tags: [سطرچین]
+title: سطرچین | ٢١ درس برای قرن ٢١
+date: 2026-05-10
+tags:
+  - سطرچین
 book_title: ""
 book_author: ""
 rating: ""
 draft: false
-original_slug: "21-lessons-for-the-21st-century-satrcin-highlights"
+original_slug: 21-lessons-for-the-21st-century-satrcin-highlights
 commentId: 21-lessons-for-the-21st-century-satrcin-highlights
-description: هایلایتهای من از کتاب ۲۱ درس برای قرن ۲۱
+description: هایلایت‌های من از کتاب ۲۱ درس برای قرن ۲۱
 featured: true
 order: 4
 image: ""
