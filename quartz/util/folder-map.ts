@@ -14,6 +14,7 @@ export const LEGACY_FOLDER_TO_SLUG: Readonly<Record<string, string>> = {
   "\u0633\u0637\u0631\u0686\u06cc\u0646": "satrchin", // سطرچین
   "\u0644\u06cc\u0633\u062a\u200c\u0647\u0627": "lists", // لیست‌ها
   "\u067e\u06cc\u0634\u0646\u0647\u0627\u062f\u0647\u0627": "recommendations", // پیشنهادها
+  "\u0647\u0641\u062a\u0647\u200c\u0647\u0627": "weeks", // weeks
 }
 
 export const SLUG_FOLDER_TO_LEGACY: Readonly<Record<string, string>> = Object.fromEntries(

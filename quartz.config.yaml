@@ -221,6 +221,18 @@ plugins:
       position: beforeBody
       priority: 22
       condition: not-index
+  # Visual "life in weeks" grid for the weekly posts. The folder maps to the
+  # `weeks` URL slug; the component itself only renders pages under `weeks/`.
+  - source: ./quartz/plugins/weeks-calendar
+    enabled: true
+    options:
+      birthDate: "2000-11-08"
+      weeksPerYear: 52
+      lifeYears: 90
+    layout:
+      position: beforeBody
+      priority: 25
+      condition: not-index
   - source: "@quartz-community/article-title"
     enabled: true
     layout:

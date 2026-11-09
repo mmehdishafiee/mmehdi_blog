@@ -1,0 +1,37 @@
+{
+  "name": "weeks-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild components.tsx --bundle --format=esm --platform=node --target=es2022 --jsx=automatic --jsx-import-source=preact --external:preact --external:preact/* --external:@quartz-community/* --outfile=dist/components.js"
+  },
+  "exports": {
+    ".": "./dist/components.js",
+    "./components": "./dist/components.js"
+  },
+  "peerDependencies": {
+    "preact": "*"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "quartz": {
+    "name": "weeks-calendar",
+    "displayName": "Weeks Calendar",
+    "description": "Visual life-in-weeks grid for the weekly posts, driven by the `week` frontmatter field.",
+    "version": "1.0.0",
+    "category": "component",
+    "defaultEnabled": true,
+    "components": {
+      "WeeksCalendar": {
+        "name": "weeks-calendar",
+        "displayName": "Weeks Calendar",
+        "description": "A 52-weeks-per-year grid of your life, with the lived weeks filled in.",
+        "version": "1.0.0",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 25
+      }
+    }
+  }
+}
