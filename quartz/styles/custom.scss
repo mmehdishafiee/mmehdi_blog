@@ -293,8 +293,86 @@ ul.toc-content.overflow .depth-6 {
 
 // Margin fix in tag pages
 
+// Folder listings -----------------------------------------------------------
+// The stock grid sizes its columns per row, so dates, titles and tags never
+// line up. Fixed columns keep every row on the same tracks:
+// title (start) · tags · date (end).
+ul.section-ul {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li.section-li {
+  margin: 0;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+li.section-li:last-child {
+  border-bottom: none;
+}
+
+li.section-li > .section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 7rem 8.5rem;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+}
+
+li.section-li > .section > .desc {
+  grid-column: 1;
+  min-width: 0;
+}
+
+li.section-li > .section > .desc > h3 {
+  margin: 0;
+  line-height: 1.6;
+}
+
+li.section-li > .section > .desc > h3 > a {
+  display: inline;
+}
+
+li.section-li > .section > .tags {
+  display: flex;
+  grid-column: 2;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
 li.section-li > .section > .meta {
-  margin: 0 0 0 1em !important;
+  grid-column: 3;
+  margin: 0 !important;
+  color: var(--gray);
+  font-size: 0.85rem;
+  opacity: 1;
+  text-align: end;
+  white-space: nowrap;
+}
+
+li.section-li > .section > .meta time {
+  display: inline-block;
+}
+
+// Narrow screens: drop the tag column and keep title + date.
+@media all and (max-width: 600px) {
+  li.section-li > .section {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem 0.75rem;
+  }
+
+  li.section-li > .section > .tags {
+    display: none;
+  }
+
+  li.section-li > .section > .meta {
+    grid-column: 2;
+  }
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
@@ -785,7 +863,8 @@ pre:has(> code.mermaid) .clipboard-button {
 
 @media (max-width: $mobileBreakpoint) {
   // The mobile header is a card with the same surface, border and radius as the
-  // main content panel.
+  // main content panel. It stays pinned while the article scrolls. The card is
+  // painted by ::after so the opaque band in ::before can sit underneath it.
   .page > #quartz-body .sidebar.left {
     align-items: center;
     justify-content: center;
@@ -795,9 +874,37 @@ pre:has(> code.mermaid) .clipboard-button {
     gap: 0.5rem;
     padding: 0.9rem 0.75rem 0.8rem;
     margin: 0.75rem 0 0 !important;
-    background: var(--content-surface) !important;
-    border: 1px solid var(--surface-border) !important;
-    border-radius: var(--radius-panel) !important;
+    background: transparent !important;
+    border: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  // Opaque band: without it the article shows through the card's rounded
+  // corners and the page margins beside it while scrolling.
+  .page > #quartz-body .sidebar.left::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -2px;
+    left: -16px;
+    right: -16px;
+    height: calc(100% + 2px);
+    background: var(--paper-surface);
+    pointer-events: none;
+  }
+
+  // The white card surface itself.
+  .page > #quartz-body .sidebar.left::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--content-surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-panel);
+    pointer-events: none;
   }
 
   // RTL lockup: logo at the right edge, title and subtitle stacked to its left.
@@ -1257,6 +1364,26 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
   .sidebar.left .explorer,
   .sidebar.left .explorer.collapsed {
     flex: 0 1 auto !important;
+  }
+
+  // The stock `div:has(> .overflow)` rule clips `.explorer-content` and lets the
+  // inner list try to scroll, but a percentage max-height resolves against an
+  // indefinite height, so the list overflows and cannot be scrolled by hand.
+  // Let the content itself be the scroll container instead.
+  .sidebar.left .explorer {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .sidebar.left .explorer .explorer-content {
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .sidebar.left .explorer .explorer-ul {
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
