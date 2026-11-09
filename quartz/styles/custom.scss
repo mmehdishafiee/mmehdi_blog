@@ -784,24 +784,8 @@ pre:has(> code.mermaid) .clipboard-button {
 }
 
 @media (max-width: $mobileBreakpoint) {
-  .title-logo {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    img,
-    #icon-header {
-      width: 75px;
-    }
-  }
-
-  #header-text {
-    min-width: 0;
-    overflow-wrap: anywhere;
-    font-size: 1.25rem;
-  }
-
+  // The mobile header is a card with the same surface, border and radius as the
+  // main content panel.
   .page > #quartz-body .sidebar.left {
     align-items: center;
     justify-content: center;
@@ -809,12 +793,66 @@ pre:has(> code.mermaid) .clipboard-button {
     width: 100%;
     min-width: 0;
     gap: 0.5rem;
-    padding: 1.25rem 0.5rem 0.75rem;
-    margin-top: 0 !important;
+    padding: 0.9rem 0.75rem 0.8rem;
+    margin: 0.75rem 0 0 !important;
+    background: var(--content-surface) !important;
+    border: 1px solid var(--surface-border) !important;
+    border-radius: var(--radius-panel) !important;
+  }
+
+  // Logo on the left, title and subtitle stacked to its right.
+  .title-logo {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 0.85rem;
+
+    img,
+    #icon-header {
+      width: 64px;
+    }
+  }
+
+  .title-logo-link {
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  .title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    min-width: 0;
+    direction: ltr;
+    text-align: left;
+  }
+
+  .title-text > * {
+    direction: rtl;
+    unicode-bidi: isolate;
+  }
+
+  #header-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .title-subtitle {
+    display: block;
+    color: var(--gray);
+    font-family: var(--bodyFont);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: left;
   }
 
   .page-title-container {
-    align-items: center;
+    align-items: flex-start;
     flex: 1 1 100%;
     width: 100%;
     min-width: 0;
@@ -823,7 +861,7 @@ pre:has(> code.mermaid) .clipboard-button {
   .page-title {
     width: 100%;
     min-width: 0;
-    text-align: center;
+    text-align: start;
   }
 
   // This wrapper contains only desktop toggles; keep the mobile buttons below.
@@ -870,7 +908,7 @@ pre:has(> code.mermaid) .clipboard-button {
 
 @media (max-width: 430px) {
   .title-logo {
-    gap: 0.5rem;
+    gap: 0.7rem;
   }
 
   .title-logo img,
@@ -1213,58 +1251,45 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
   transform: rotate(-45deg);
 }
 
-// The site menu has no section title and nothing to click: it is always open on
-// desktop/tablet. Only the mobile hamburger (<=800px) still opens a drawer.
+// The site menu has no section title and nothing to click: on desktop it is
+// always open. Only the mobile hamburger opens the sheet (see below).
 .sidebar.left .explorer > .desktop-explorer {
   display: none;
 }
 
 // A leftover `.collapsed` state (e.g. after resizing from mobile) must not clip
 // the always-open list back to its 1.2rem header height.
-.sidebar.left .explorer,
-.sidebar.left .explorer.collapsed {
-  flex: 0 1 auto !important;
+@media (min-width: $desktopBreakpoint) {
+  .sidebar.left .explorer,
+  .sidebar.left .explorer.collapsed {
+    flex: 0 1 auto !important;
+  }
 }
 
 @media all and ($mobile) {
-  // Explorer drawer: slide in from the physical right edge in RTL.
-  html[dir="rtl"] .page > #quartz-body.lock-scroll > :not(.sidebar.left:has(.explorer)) {
-    transform: translateX(-100dvw);
-  }
-
-  html[dir="rtl"] .explorer {
-    &.collapsed > .explorer-content {
-      transform: translateX(100vw);
-      visibility: hidden;
-    }
-
-    &:not(.collapsed) > .explorer-content {
-      transform: translateX(0);
-      visibility: visible;
-    }
-
-    .explorer-content {
-      left: auto;
-      right: 0;
-      transform: translateX(100vw);
-    }
-  }
-
-  // Site menu ("مطالب") in the mobile header: a touch-sized hamburger that
-  // opens the same full-screen drawer the folder pages use.
+  // The menu control is a 44px square, exactly like the theme toggle.
   .page > #quartz-body .sidebar.left > .explorer {
     order: 0;
     align-self: center;
-    flex: 0 0 auto;
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
     min-height: 0;
     margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
   }
 
   .sidebar.left .explorer > .mobile-explorer {
+    display: flex;
+    box-sizing: border-box;
+    flex: 0 0 2.75rem;
     align-items: center;
     justify-content: center;
     width: 2.75rem;
     height: 2.75rem;
+    padding: 0;
     border: 1px solid var(--surface-border);
     border-radius: var(--radius-control);
     background: var(--content-surface);
@@ -1272,33 +1297,72 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
   }
 
   .sidebar.left .explorer > .mobile-explorer .lucide-menu {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
-  .sidebar.left .explorer .explorer-content {
+  // Rounded sheet, inset like the content card, with a dimmed page behind it.
+  .page > #quartz-body .sidebar.left .explorer .explorer-content {
+    position: fixed;
+    inset: 0.75rem;
+    width: auto;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 4.25rem 1rem 1.25rem;
+    overflow-y: auto;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-panel);
+    background: var(--content-surface);
+    box-shadow:
+      0 0 0 100vmax rgba(24, 12, 34, 0.32),
+      0 18px 48px rgba(24, 12, 34, 0.22);
+    transform: translateY(0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform 220ms ease,
+      opacity 220ms ease,
+      visibility 220ms;
     z-index: 300;
   }
 
-  // 801–1199px: the menu stays open like on desktop, with no title or toggle.
-  .sidebar.left .explorer > .desktop-explorer {
+  .page > #quartz-body .sidebar.left .explorer:not(.collapsed) > .explorer-content {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // While open, the hamburger becomes the sheet's close button.
+  .page > #quartz-body .sidebar.left .explorer:not(.collapsed) > .mobile-explorer {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    z-index: 320;
+  }
+
+  .sidebar.left .explorer:not(.collapsed) > .mobile-explorer .lucide-menu {
     display: none;
   }
-}
 
-// The mobile drawer must cover the whole viewport. The plugin positions it
-// absolutely against the sidebar (which is inset by the page padding), leaving
-// a sliver uncovered; pin it to the viewport instead.
-@media all and (max-width: 800px) {
-  .page > #quartz-body .sidebar.left .explorer .explorer-content {
-    position: fixed;
-    inset-block-start: 0;
-    right: 0;
-    left: auto;
-    width: 100vw;
-    max-width: 100vw;
-    height: 100dvh;
-    max-height: 100dvh;
-    box-sizing: border-box;
+  .sidebar.left .explorer:not(.collapsed) > .mobile-explorer::after {
+    content: "×";
+    font-size: 1.7rem;
+    line-height: 1;
+    color: var(--dark);
+  }
+
+  .page > #quartz-body .sidebar.left .explorer .explorer-ul {
+    padding-bottom: 0.25rem;
+  }
+
+  // The page behind the sheet must not scroll.
+  html.mobile-no-scroll,
+  html.mobile-no-scroll body {
+    overflow: hidden;
   }
 }

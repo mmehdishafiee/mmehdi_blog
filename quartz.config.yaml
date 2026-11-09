@@ -245,6 +245,8 @@ plugins:
       priority: 10
   - source: ./quartz/plugins/page-title
     enabled: true
+    options:
+      subtitle: "وبلاگ محمد مهدی"
     layout:
       position: left
       priority: 5

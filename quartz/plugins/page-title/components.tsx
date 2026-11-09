@@ -8,8 +8,16 @@ import { pathToRoot, joinSegments, type FullSlug } from "@quartz-community/utils
 /**
  * Sidebar header: site logo icon above the site title, both linking home.
  * Replaces @quartz-community/page-title so the logo can sit in the title block.
+ * On mobile the logo moves beside the title and a small subtitle appears.
  */
-export const PageTitle: QuartzComponentConstructor = () => {
+interface Options {
+  /** Line shown under the site title on mobile. */
+  subtitle?: string
+}
+
+export const PageTitle: QuartzComponentConstructor<Options | undefined> = (opts) => {
+  const subtitle = opts?.subtitle ?? "وبلاگ محمد مهدی"
+
   const Component: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
     const title = cfg?.pageTitle ?? "میم"
     const slug = (fileData.slug === "404" ? "index" : fileData.slug!) as FullSlug
@@ -20,12 +28,15 @@ export const PageTitle: QuartzComponentConstructor = () => {
       <div class="page-title-container">
         <h1 class={[displayClass, "page-title"].filter(Boolean).join(" ")}>
           <div class="title-logo">
-            <a href={homeHref}>
+            <a class="title-logo-link" href={homeHref}>
               <img id="icon-header" src={joinSegments(baseDir, "static/icon-header.png")} alt="" />
             </a>
-            <a href={homeHref} class={displayClass} id="header-text">
-              {title}
-            </a>
+            <div class="title-text">
+              <a href={homeHref} class={displayClass} id="header-text">
+                {title}
+              </a>
+              {subtitle && <span class="title-subtitle">{subtitle}</span>}
+            </div>
           </div>
         </h1>
       </div>
@@ -63,6 +74,11 @@ export const PageTitle: QuartzComponentConstructor = () => {
 
 #header-text:hover {
   color: var(--tertiary);
+}
+
+/* Shown only in the mobile lockup (logo + title + subtitle). */
+.title-subtitle {
+  display: none;
 }
 `
 
