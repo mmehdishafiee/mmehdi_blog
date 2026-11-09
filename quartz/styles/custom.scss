@@ -1213,6 +1213,19 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
   transform: rotate(-45deg);
 }
 
+// The site menu has no section title and nothing to click: it is always open on
+// desktop/tablet. Only the mobile hamburger (<=800px) still opens a drawer.
+.sidebar.left .explorer > .desktop-explorer {
+  display: none;
+}
+
+// A leftover `.collapsed` state (e.g. after resizing from mobile) must not clip
+// the always-open list back to its 1.2rem header height.
+.sidebar.left .explorer,
+.sidebar.left .explorer.collapsed {
+  flex: 0 1 auto !important;
+}
+
 @media all and ($mobile) {
   // Explorer drawer: slide in from the physical right edge in RTL.
   html[dir="rtl"] .page > #quartz-body.lock-scroll > :not(.sidebar.left:has(.explorer)) {
@@ -1267,11 +1280,9 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
     z-index: 300;
   }
 
-  // 801–1199px still gets the plugin's in-flow desktop toggle; centre it so it
-  // reads as a box under the other header controls.
+  // 801–1199px: the menu stays open like on desktop, with no title or toggle.
   .sidebar.left .explorer > .desktop-explorer {
-    justify-content: center;
-    width: 100%;
+    display: none;
   }
 }
 
