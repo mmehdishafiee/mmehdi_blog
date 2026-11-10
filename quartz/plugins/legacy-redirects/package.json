@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --format=esm --platform=node --target=es2022 --external:@quartz-community/* --outfile=dist/index.js"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
   "quartz": {
     "name": "legacy-redirects",
     "displayName": "Legacy Persian Redirects",
-    "description": "Emits Cloudflare Pages _redirects rules from Persian URLs to the English slugs.",
-    "version": "1.0.0",
+    "description": "Emits 301 rules and meta-refresh stubs for the old Persian URLs.",
+    "version": "1.1.0",
     "category": "emitter",
     "defaultEnabled": true
   }

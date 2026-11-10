@@ -9,10 +9,15 @@ configuration:
   baseUrl: blog.mmehdi.ir
   ignorePatterns:
     - private
-    - templates
+    - Templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    # `local` keeps Head.tsx from emitting its own Google Fonts <link>. The
+    # `@quartz-community/quartz-fonts` plugin still fetches Vazirmatn/IBM Plex
+    # and serves them from /static/fonts; Ray-ExtraBold comes from the local
+    # @font-face in styles/custom.scss. Previously two Google <link>s shipped,
+    # and the Head one requested `Ray-ExtraBold` — a family Google doesn't have.
+    fontOrigin: local
     cdnCaching: true
     typography:
       header: Ray-ExtraBold
@@ -123,7 +128,10 @@ plugins:
       useThemeFonts: false
       fontOrigin: googleFonts
       body: Vazirmatn
-      header: Ray-ExtraBold
+      # Ray-ExtraBold is not on Google Fonts (the request 400s), so the Google
+      # link names a real family and Ray is loaded from the local @font-face in
+      # styles/custom.scss, which pins --titleFont/--headerFont to it.
+      header: Vazirmatn
       interface: Vazirmatn
       code: IBM Plex Mono
   # The "things" theme layer re-declares --secondary/--tertiary/--gray after the
@@ -154,7 +162,7 @@ plugins:
   - source: "@quartz-community/cname"
     enabled: true
   - source: "@quartz-community/canvas-page"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/content-page"
     enabled: true
   - source: "@quartz-community/folder-page"
@@ -170,11 +178,7 @@ plugins:
   - source: "@quartz-community/graph"
     enabled: false
   - source: ./quartz/plugins/graph-local
-    enabled: true
-    layout:
-      position: right
-      priority: 10
-      display: desktop-only
+    enabled: false
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -351,7 +355,7 @@ plugins:
       priority: 25
       display: mobile-only
   - source: "@quartz-community/bases-page"
-    enabled: true
+    enabled: false
     options: {}
     order: 50
   - source: "@quartz-community/note-properties"
@@ -373,7 +377,7 @@ plugins:
     options: {}
     order: 45
   - source: "@quartz-community/encrypted-pages"
-    enabled: true
+    enabled: false
     options:
       iterations: 600000
       passwordField: password
