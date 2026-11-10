@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --format=esm --platform=node --target=es2022 --outfile=dist/index.js"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
