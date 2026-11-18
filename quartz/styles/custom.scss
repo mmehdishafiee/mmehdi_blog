@@ -1450,14 +1450,18 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
     z-index: 300;
   }
 
-  .page > #quartz-body .sidebar.left .explorer:not(.collapsed) > .explorer-content {
+  // The open state hangs off `aria-expanded="true"`, not off the absence of
+  // `.collapsed`: while SPA-navigating, micromorph morphs in markup that has
+  // neither of them, and keying on `.collapsed` made the sheet flash open for
+  // a couple of frames before the explorer script re-collapsed it.
+  .page > #quartz-body .sidebar.left .explorer[aria-expanded="true"] > .explorer-content {
     transform: none;
     opacity: 1;
     visibility: visible;
   }
 
   // While open, the hamburger becomes the sheet's close button.
-  .page > #quartz-body .sidebar.left .explorer:not(.collapsed) > .mobile-explorer {
+  .page > #quartz-body .sidebar.left .explorer[aria-expanded="true"] > .mobile-explorer {
     position: fixed;
     top: 1.5rem;
     left: 1.5rem;
@@ -1466,11 +1470,11 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
     z-index: 320;
   }
 
-  .sidebar.left .explorer:not(.collapsed) > .mobile-explorer .lucide-menu {
+  .sidebar.left .explorer[aria-expanded="true"] > .mobile-explorer .lucide-menu {
     display: none;
   }
 
-  .sidebar.left .explorer:not(.collapsed) > .mobile-explorer::after {
+  .sidebar.left .explorer[aria-expanded="true"] > .mobile-explorer::after {
     content: "×";
     font-size: 1.7rem;
     line-height: 1;
@@ -1485,9 +1489,9 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
   // explorer sets `visibility: visible` (and `pointer-events: all`) on the file
   // titles inside it. That re-enables hit-testing for the whole invisible sheet,
   // so every tap on the page underneath landed on some file link of the drawer
-  // and opened a different note. Kill hit-testing while collapsed.
-  .page > #quartz-body .sidebar.left .explorer.collapsed > .explorer-content,
-  .page > #quartz-body .sidebar.left .explorer.collapsed > .explorer-content * {
+  // and opened a different note. Kill hit-testing unless the sheet is open.
+  .page > #quartz-body .sidebar.left .explorer:not([aria-expanded="true"]) > .explorer-content,
+  .page > #quartz-body .sidebar.left .explorer:not([aria-expanded="true"]) > .explorer-content * {
     pointer-events: none !important;
   }
 
