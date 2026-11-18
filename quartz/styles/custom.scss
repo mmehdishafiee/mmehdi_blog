@@ -1481,6 +1481,16 @@ body:not([data-slug="index"]) .sidebar.right .recent-notes {
     padding-bottom: 0.25rem;
   }
 
+  // The closed sheet is only `visibility: hidden` + `opacity: 0`, but the stock
+  // explorer sets `visibility: visible` (and `pointer-events: all`) on the file
+  // titles inside it. That re-enables hit-testing for the whole invisible sheet,
+  // so every tap on the page underneath landed on some file link of the drawer
+  // and opened a different note. Kill hit-testing while collapsed.
+  .page > #quartz-body .sidebar.left .explorer.collapsed > .explorer-content,
+  .page > #quartz-body .sidebar.left .explorer.collapsed > .explorer-content * {
+    pointer-events: none !important;
+  }
+
   // The page behind the sheet must not scroll.
   html.mobile-no-scroll,
   html.mobile-no-scroll body {
