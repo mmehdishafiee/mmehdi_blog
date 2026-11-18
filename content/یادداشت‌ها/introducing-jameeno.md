@@ -5,7 +5,8 @@ tags:
 draft: false
 original_slug: introducing-jameeno
 commentId: introducing-jameeno
-image: /attachments/25-درس-از-24-سالگی.ir_.png
+image: ""
+socialImage: https://blog.mmehdi.ir/attachments/introducing-jameeno-1.webp
 description:
 featured: false
 order:

@@ -44,6 +44,8 @@ jobs:
             ${{ runner.os }}-plugins-
       - name: Install Dependencies
         run: npm install
+      - name: Check frontmatter images
+        run: npm run check:images
       - name: Install Quartz plugins
         run: npx quartz plugin install
       - name: Build Quartz
