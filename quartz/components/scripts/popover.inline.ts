@@ -5,10 +5,20 @@ import { fetchCanonical } from "./util"
 const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
 
+// Popovers only make sense for devices with a real hover-capable pointer.
+// Touch devices can still fire `mouseenter` on tap, so gate on capability.
+function canHover(): boolean {
+  return window.matchMedia("(hover: hover) and (pointer: fine)").matches
+}
+
 async function mouseEnterHandler(
   this: HTMLAnchorElement,
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
+  if (!canHover()) {
+    return
+  }
+
   const link = (activeAnchor = this)
   if (link.dataset.noPopover === "true") {
     return

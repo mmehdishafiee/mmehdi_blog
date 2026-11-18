@@ -14,6 +14,14 @@
   }
 }
 
+// Popovers are a hover-only affordance: never show them on touch devices,
+// where tapping a link would otherwise flash a preview instead of navigating.
+@media (hover: none), (pointer: coarse) {
+  .popover {
+    display: none !important;
+  }
+}
+
 .popover {
   z-index: 999;
   position: fixed;
